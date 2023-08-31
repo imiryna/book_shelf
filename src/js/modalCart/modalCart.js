@@ -1,0 +1,1 @@
+import { markupModal } from './templateCart';
