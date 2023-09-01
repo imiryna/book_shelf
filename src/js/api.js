@@ -43,7 +43,7 @@ async function getTopFiveBooks() {
 // example
 // getTopFiveBooks().then(res => console.log(res));
 
-export async function getBookById(bookId) {
+async function getBookById(bookId) {
   try {
     const book = await axios.get(BASE_URL + `books/${bookId}`);
     return book;
