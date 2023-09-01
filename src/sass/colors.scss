@@ -1,28 +1,30 @@
 :root {
-  $background-switch-color: #f6f6f6;
-  $primary-switcher-color: #111111;
-  $book-list-switcher-color: rgba(17, 17, 17, 0.6);
+  --background-switch-color: #f6f6f6;
+  --primary-switcher-color: #111111;
+  --book-list-switcher-color: rgba(17, 17, 17, 0.6);
 
-  $gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
-  $gradient-color: radial-gradient(
-    189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
-  );
-
-  $black-color-900: #000;
-  $black-color-800: #202024;
-  $grey-color: #b4afaf;
-  $secondary-color: #4f2ee8;
-  $accent-color: #eac645;
-  $white-color: #fff;
-  $box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+  --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 }
 
 [data-theme='dark'] {
-  $background-switch-color: #111111;
-  $primary-switcher-color: #fff;
-  $book-list-switcher-color: rgba(255, 255, 255, 0.6);
-
-  $gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  --background-switch-color: #111111;
+  --primary-switcher-color: #fff;
+  --book-list-switcher-color: rgba(255, 255, 255, 0.6);
+  
+  --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
 }
+
+
+$gradient-color: radial-gradient(
+  189.32% 190.93% at 59.76% -23.42%,
+  #4f2ee8 18.03%,
+  #fff 100%
+);
+
+$black-color-900: #000;
+$black-color-800: #202024;
+$grey-color: #b4afaf;
+$secondary-color: #4f2ee8;
+$accent-color: #eac645;
+$white-color: #fff;
+$box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
