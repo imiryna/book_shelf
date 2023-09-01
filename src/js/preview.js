@@ -1,11 +1,11 @@
-import { getTopFiveBooks } from './js/api';
+import { getTopFiveBooks } from './api';
 export { markupTopCategoryBooks };
 
 function markupTopCategoryBooks() {
   getTopFiveBooks().then(res => {
     const topBooks = res.data;
     topBooks.forEach(category => {
-      console.log(category);
+      //   console.log(category);
       const categoryBox = createCategoryBox(category);
       document
         .querySelector('.top-book-list')
