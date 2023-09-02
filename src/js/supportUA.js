@@ -110,7 +110,7 @@ function showSixItems() {
 }
 showSixItems();
 
-// Показати лише перші 4 елементів
+// Показати лише перші 4 елементів on mobile not ready...
 
 showAllButton.addEventListener('click', onClick);
 function onClick(event) {
