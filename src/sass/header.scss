@@ -1,3 +1,187 @@
 @import './null-styles.scss';
 @import './colors.scss';
 
+.header {
+  background-color: var(--primaryHeader-switch-color);
+}
+
+.header-container {
+  width: 100%;
+  max-width: 335px;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 18px 20px;
+  outline: 1px solid red;
+
+  @media screen and (min-width: 656px) {
+    max-width: 656px;
+  }
+}
+
+.logo-text {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(  --secondary-switch-color);
+  
+  &::before {
+    content: url(../images/icons/logo.svg);
+    margin-right: 8px;
+  }
+}
+
+.header-navigation-desktop {
+  display: none;
+
+  @media screen and (min-width: 656px) {
+    display: block;
+  }
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+  margin-left: auto;
+}
+
+.theme-switch-wrapper span {
+  // margin-right: 10px;
+  // font-size: 1rem;
+  display: none;
+
+  @media screen and (min-width: 656px) {
+    display: block;
+  }
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--secondary-switch-color);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 40px;
+
+  @media screen and (min-width: 656px) {
+    width: 60px;
+    height: 34px;
+  }
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.switch-slider {
+  background: var(--gradient-switcher);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+
+  &::before {
+    background: $white-color;
+    bottom: 1.5px;
+    content: '';
+    height: 18px;
+    left: 1.5px;
+    position: absolute;
+    transition: 0.4s;
+    width: 18px;
+  }
+
+  @media screen and (min-width: 656px) {
+    &::before {
+      height: 26px;
+      left: 4px;
+      width: 26px;
+    }
+  }
+}
+
+input:checked + .switch-slider {
+  background: var(--gradient-switcher);
+}
+
+input:checked + .switch-slider::before {
+  transform: translateX(19px);
+
+  @media screen and (min-width: 656px) {
+    transform: translateX(26px);
+  }
+}
+
+.switch-slider.round {
+  border-radius: 34px;
+
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.fas {
+  font-size: 30px;
+  margin-right: 5px;
+  color: var(--secondary-switch-color);
+}
+
+/* --- Menu Bars ------------------------------------ */
+
+.burger-menu-bars {
+  display: inline;
+  cursor: pointer;
+
+
+  @media screen and (min-width: 656px) {
+    display: none;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3,
+.bar4 {
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary-switcher-color);
+  border-radius: 14px;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.bar2,
+.bar4 {
+  width: 19px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-4px, 7px);
+  height: 3px;
+}
+
+/* Fade out the middle bars */
+.change .bar2,
+.change .bar3 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar4 {
+  transform: rotate(45deg) translate(-4px, -7px);
+  width: 24px;
+  height: 3px;
+}
