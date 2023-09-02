@@ -15,15 +15,19 @@ function createCategoryList(data) {
     .join('');
 }
 
+function toggleActiveLink(evt) {
+  const currentActiveLink = document.querySelector('.active');
+  currentActiveLink.classList.remove('active');
+  evt.target.classList.add('active');
+}
+
 sidebarList.addEventListener('click', categoryFilterBooks);
 function categoryFilterBooks(evt) {
   if (evt.target.nodeName !== 'A') {
     return;
   }
   evt.preventDefault();
-  const currentActiveLink = document.querySelector('.active');
-  currentActiveLink.classList.remove('active');
-  evt.target.classList.add('active');
+  toggleActiveLink(evt);
   getBooksByCategory(evt.target.textContent).then(
     ({ data }) => (categoryList.innerHTML = createBooks(data))
   );
