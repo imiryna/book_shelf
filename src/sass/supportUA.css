@@ -100,10 +100,6 @@ h6 {
   font-weight: 400;
 }
 
-.box {
-  border: 1px dashed red;
-}
-
 .support-card {
   display: block;
   background-image: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4f2ee8 18.03%, #fff 100%);
