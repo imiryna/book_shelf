@@ -173,8 +173,13 @@ letter-spacing: -0.96px;
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .icon-ok {
-  margin-top: 3px;
+  margin-top: 1px;
 }
+@media screen and (min-width: 768px) {
+    .icon-ok {
+     margin-top: 3px;
+    }
+  }
 .icon-ua {
   padding-bottom: 0;
   margin: 0;

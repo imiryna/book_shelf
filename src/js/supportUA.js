@@ -88,7 +88,7 @@ function renderSupport(arraySupports, arrayImg) {
                         <span class="support-numbers box">${formatNumber(
                           (counter += 1)
                         )}</span>
-                        <img class="img-support" src="${imgSrc}" alt="${title}" onclick="openLink('${url}')">
+                        <img class="img-support" src="${imgSrc}" alt="${title}">
                         
                     </a>
                 </li>
