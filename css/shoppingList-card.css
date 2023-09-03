@@ -101,7 +101,11 @@ h6 {
 }
 
 .card {
+<<<<<<< HEAD
   width: 350px;
+=======
+  width: auto;
+>>>>>>> e7e479d (shopping-card)
   height: 170px;
   padding: 14px;
   border-radius: 16px;
@@ -151,6 +155,7 @@ h6 {
   width: 100px;
   height: 142px;
   padding: 0px;
+<<<<<<< HEAD
   display: block;
 }
 
@@ -158,4 +163,8 @@ h6 {
   width: 200px;
   height: 200px;
   fill: #2a2a2a;
+=======
+  margin: 0px;
+  display: block;
+>>>>>>> e7e479d (shopping-card)
 }/*# sourceMappingURL=shoppingList-card.css.map */
