@@ -47,15 +47,15 @@ const arraySupports = [
 ];
 
 const arrayImg = [
-  { name: 'Save the Children', img: './image/SaveTheChildren.png' },
-  { name: 'Project HOPE', img: './image/projectHope.png' },
-  { name: 'International Medical Corps', img: './image/interMed.png' },
-  { name: 'UNITED24', img: './image/united24.png' },
-  { name: 'Medicins Sans Frontieres', img: './image/medSans.png' },
-  { name: 'RAZOM', img: './image/razom.png' },
-  { name: 'Action against hunger', img: './image/actionAH.png' },
-  { name: 'World vision', img: './image/worldV.png' },
-  { name: 'Serhiy Prytula Charity Foundation', img: './image/prytula.png' },
+  { name: 'Save the Children', img: '../images/supportUA/SaveTheChildren.png' },
+  { name: 'Project HOPE', img: '../images/supportUA/projectHope.png' },
+  { name: 'International Medical Corps', img: '../images/supportUA/interMed.png' },
+  { name: 'UNITED24', img: '../images/supportUA/united24_1.png' },
+  { name: 'Medicins Sans Frontieres', img: '../images/supportUA/medSans.png' },
+  { name: 'RAZOM', img: '../images/supportUA/razom.png' },
+  { name: 'Action against hunger', img: '../images/supportUA/actionAH.png' },
+  { name: 'World vision', img: '../images/supportUA/worldV.png' },
+  { name: 'Serhiy Prytula Charity Foundation', img: '../images/supportUA/prytula.png' },
 ];
 
 const supCard = document.querySelector('.support-card');
