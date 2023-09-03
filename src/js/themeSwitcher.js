@@ -40,3 +40,13 @@ function toggleNav() {
 }
 
 menuBars.addEventListener('click', toggleNav);
+
+//DROPDOWN JS
+
+const dropdown = document.querySelector('.header-signin-dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropdown.addEventListener('click', function () {
+  dropdownContent.style.display =
+    dropdownContent.style.display === 'block' ? 'none' : 'block';
+});

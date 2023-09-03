@@ -1,21 +1,45 @@
   <div class="header-container">
     <a href="../index.html" class="logo-text"> Bookshelf </a>
     <nav class="header-navigation-desktop">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../shopping_list.html">Shopping list</a></li>
+      <ul class="header-nav-list">
+        <li class="nav-list-item header-current-page"><a href="../index.html" class="nav-list-link">Home</a></li>
+        <li class="nav-list-item"><a href="../shopping_list.html" class="nav-list-link">Shopping list</a></li>
       </ul>
     </nav>
     <div class="theme-switch-wrapper">
-      <span id="toggle-icon">
+      <!-- <span id="toggle-icon">
         <span class="toggle-text">Light Mode</span>
         <i class="fas fa-sun"></i>
-      </span>
+      </span> -->
       <label class="theme-switch">
         <input type="checkbox" />
         <div class="switch-slider round"></div>
       </label>
     </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hover Dropdown зі зображеннями та іменами</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="header-signin-dropdown">
+            <div class="dropdown-trigger">
+                <img src="../images/icons/user.svg" alt="user-photo" class="user-image">
+                <span class="user-signin">Sign In</span>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">Sign in</a>
+                <a href="#">Change user</a>
+                <!-- Додайте інші опції за аналогією -->
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
     <div class="burger-menu-bars" id="menu-bars">
       <div class="bar1"></div>
       <div class="bar2"></div>
