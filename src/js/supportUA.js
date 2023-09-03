@@ -63,6 +63,8 @@ const supList = document.querySelector('.support-list');
 const showAllButton = document.querySelector('.support-btn');
 
 const array = [];
+let initialListItems = []; // Зберігаємо початковий стан списку li
+
 
 function formatNumber(number) {
   return number.toLocaleString('en-US', {
@@ -99,41 +101,64 @@ renderSupport(arraySupports, arrayImg);
 
 
 // Показати лише перші  елементи
-function showItems() {
+function updateVisibleItems() {
   const listItems = supList.querySelectorAll('.support-item');
-  listItems.forEach((item, index) => {
-    if (index >= 6 && supCard.clientHeight >= 352) {
-      item.style.display = 'none';
-    } else if (index >= 6 && supCard.clientHeight >= 474) {
-      item.style.display = 'none';
-    }
-  });
-}
-showItems();
 
-// ! Показати лише перші 4 елементів on mobile not ready...
+  if (window.innerWidth <= 767) {
+      // Мобільна версія - показуємо 4 елементи
+      for (let i = 0; i < listItems.length; i+=1) {
+          if (i < 4) {
+              listItems[i].style.display = 'block';
+          } else {
+              listItems[i].style.display = 'none';
+          }
+      }
+  } else if (window.innerWidth >= 768 ) {
+      // Планшет - показуємо 6 елементів
+      for (let i = 0; i < listItems.length; i+=1) {
+          if (i < 6) {
+              listItems[i].style.display = 'block';
+          } else {
+              listItems[i].style.display = 'none';
+          }
+      }
+  } else {
+      // Десктоп
+      listItems.forEach(item => {
+          item.style.display = 'block';
+      });
+  }
+}
+
+updateVisibleItems();
 
 showAllButton.addEventListener('click', onClick);
-function onClick(event) {
-  event.preventDefault();
-
+function onClick() {
   const listItems = supList.querySelectorAll('.support-item');
 
   listItems.forEach(item => {
-    item.style.display = 'block';
+      item.style.display = 'block';
   });
-  supCard.style.maxHeight = 'none'; // Розширення блоку
-  showAllButton.style.display = 'none'; // Ховаємо кнопку "Показати все"
 
-  showAllButton.removeEventListener('click', onClick); // Видалення обробника кліку після кліку
-}
+  supCard.style.maxHeight = 'none';
+  showAllButton.style.display = 'none';
+
+  showAllButton.removeEventListener('click', onClick);
+  
+};
+
+window.addEventListener('resize', updateVisibleItems);
 
 document.addEventListener('click', onOutside);
 function onOutside(event) {
-  if (!supCard.contains(event.target)) {
-    // showAllButton.removeEventListener('click', onClick);
-    showAllButton.addEventListener('click', onClick);
-    showItems();
-    showAllButton.style.display = 'block'; // Показуємо кнопку "Показати все"
-  }
+    if (!supCard.contains(event.target)) {
+        showAllButton.addEventListener('click', onClick);
+
+        updateVisibleItems();
+
+
+        showAllButton.style.display = 'block'; // Показуємо кнопку "Показати все"
+    }
+  
+    // document.removeEventListener('click', onOutside);
 }
