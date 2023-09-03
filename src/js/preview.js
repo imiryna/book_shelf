@@ -1,12 +1,11 @@
 import { getTopFiveBooks } from './api';
 export { markupTopCategoryBooks };
-// import { openModal } from './modalCard/modalCard';
+import { openModal } from './modalCard/modalCard';
 
 function markupTopCategoryBooks() {
   getTopFiveBooks().then(res => {
     const topBooks = res.data;
     topBooks.forEach(category => {
-      //   console.log(category);
       const categoryBox = createCategoryBox(category);
       document
         .querySelector('.top-book-list')
@@ -18,7 +17,6 @@ function markupTopCategoryBooks() {
     });
   });
 }
-markupTopCategoryBooks();
 
 function createCategoryBox(category) {
   const bookList = category.books
@@ -32,10 +30,10 @@ function createCategoryBox(category) {
     .join('');
   return `
 <div class="category-box">
-    <p class="name-category">${category.list_name}</p>
+    <p class="name-category">IRYNA ${category.list_name}</p>
     <ul class="category-list">${bookList}</ul>
     <div>
-      <button></button>
+      <button>see more</button>
     </div>
         `;
 }
@@ -55,6 +53,6 @@ function createBookCard(book) {
 }
 
 function handleClickOnPhoto(e) {
-  // openModal(e.target.id);
+  openModal(e.target.id);
   console.log('should be openModal call');
 }
