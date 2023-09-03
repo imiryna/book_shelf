@@ -1,16 +1,17 @@
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.getElementById('toggle-icon');
+const headerEl = document.querySelector('header');
+const menuBars = document.getElementById('menu-bars');
 
 const DARK_THEME = 'dark';
-const LIGHT_THEME = 'light'
-
+const LIGHT_THEME = 'light';
 
 function toggleDarkLightMode(isDark) {
-  // сюди будуть писатись тернарники де буде провірятись яка тема стоїть у юзера та будуть застосовуватись відповідні стилі
-
-  // example 
+  toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
+  isDark
+    ? toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon')
+    : toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
 }
-
 
 function switchTheme(e) {
   if (e.target.checked) {
@@ -33,3 +34,19 @@ if (currentTheme) {
     toggleDarkLightMode(true);
   }
 }
+
+function toggleNav() {
+  menuBars.classList.toggle('change');
+}
+
+menuBars.addEventListener('click', toggleNav);
+
+//DROPDOWN JS
+
+const dropdown = document.querySelector('.header-signin-dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropdown.addEventListener('click', function () {
+  dropdownContent.style.display =
+    dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
