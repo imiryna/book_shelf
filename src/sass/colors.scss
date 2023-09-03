@@ -1,4 +1,6 @@
 :root {
+  --primaryHeader-switch-color: #fff;
+  --secondary-switch-color: #000;
   --background-switch-color: #f6f6f6;
   --primary-switcher-color: #111111;
   --book-list-switcher-color: rgba(17, 17, 17, 0.6);
@@ -7,6 +9,8 @@
 }
 
 [data-theme='dark'] {
+  --primaryHeader-switch-color: #000;
+  --secondary-switch-color: #fff;
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
