@@ -9,7 +9,6 @@ const authModalLink = document.querySelector('.authorization-link');
 const body = document.querySelector('body');
 const signButtom = document.querySelector('header-signin-dropdown');
 const idTest = document.getElementById('test');
-// console.log(authLink);
 
 // authLink.addEventListener('click', onClickAuthLink);
 registrLink.addEventListener('click', onClickRegistrLink);
