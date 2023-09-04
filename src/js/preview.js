@@ -1,11 +1,12 @@
 import { getTopFiveBooks } from './api';
 export { markupTopCategoryBooks };
-import { openModal } from './modalCard/modalCard';
+// import { openModal } from './modalCard/modalCard';
 
 function markupTopCategoryBooks() {
   getTopFiveBooks().then(res => {
     const topBooks = res.data;
     topBooks.forEach(category => {
+      //   console.log(category);
       const categoryBox = createCategoryBox(category);
       document
         .querySelector('.top-book-list')
@@ -17,6 +18,7 @@ function markupTopCategoryBooks() {
     });
   });
 }
+markupTopCategoryBooks();
 
 function createCategoryBox(category) {
   const bookList = category.books
@@ -30,17 +32,17 @@ function createCategoryBox(category) {
     .join('');
   return `
 <div class="category-box">
-    <p class="name-category">IRYNA ${category.list_name}</p>
-    <ul class="category-list">${bookList}</ul>
+    <p class="name-category">${category.list_name}</p>
+    <ul class="category-list-book">${bookList}</ul>
     <div>
-      <button>see more</button>
+      <button class="see-more">see&nbsp;more</button>
     </div>
         `;
 }
 
 function createBookCard(book) {
   return `<li class="category-list-item">
-  <img class="book-img" src="${book.book_image}" alt="${book.title}" title ="${book.title}" id="${book._id}" loading="lazy" />
+  <img class="book-img-ts" src="${book.book_image}" alt="${book.title}" title ="${book.title}" id="${book._id}" loading="lazy" />
   <div class="info">
     <h2 class="title">
      ${book.title}

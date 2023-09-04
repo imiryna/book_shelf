@@ -1,0 +1,136 @@
+@import './colors.scss';
+@import './null-styles.scss';
+
+
+.top-book-list {
+  margin: 40px 24px 72px 40px;
+  max-width: 996px;
+  @media screen and (max-width: 768px) {
+    margin: 100px 32px 100px 32px;
+    max-width: 704px;
+    
+}
+@media screen and (max-width: 375px) {
+  margin: 40px 20px 80px 20px;
+  max-width: 375px;
+  
+}
+}
+// 
+
+
+
+.name-category {
+color: #B4AFAF;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+letter-spacing: 0.42px;
+text-transform: uppercase;
+margin-bottom: 18px;
+}
+.title {
+color: #111;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: -0.64px;
+text-transform: uppercase;
+margin-bottom: 4px;
+}
+.info-item {
+color: #B4AFAF;
+font-size: 12px;
+font-style: italic;
+font-weight: 400;
+line-height: 14px; 
+letter-spacing: -0.48px;
+}
+.category-list-book {
+display: flex;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .category-list-item:nth-child(n+8) {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .category-list-item:nth-child(n+4) {
+    display: none;
+  }
+}
+
+.category-list-item:not(:last-child)  {
+    margin-right: 24px;
+
+}
+.see-more {
+   
+  padding: 14px 28px;
+  
+  border-radius: 40px;
+  border: 2px solid #4f2ee8;
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; 
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+  
+  margin-left: 872px;
+  margin-top: 32px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    margin-left: 580px;
+    
+}
+@media screen and (max-width: 375px) {
+  margin-left: 210px;
+  
+}
+}
+.best-sellers{
+color: #111;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 52px; 
+letter-spacing: -1.92px;
+margin-bottom: 40px;
+@media screen and (max-width: 375px) {
+color: #111;
+
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 38px; 
+letter-spacing: -1.28px;
+  
+}
+}
+.best-sellers-books{
+color: #4F2EE8;
+}
+.book-img-ts {
+margin-bottom: 18px;
+width: 180px;
+height: 256px;
+@media screen and (max-width: 768px) {
+  width: 218px;
+  height: 316px;
+  
+}
+@media screen and (max-width: 375px) {
+width: 335px;
+height: 485px;
+
+}
+}
