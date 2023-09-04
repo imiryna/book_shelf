@@ -1,25 +1,17 @@
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.getElementById('toggle-icon');
+const headerEl = document.querySelector('header');
+const menuBars = document.getElementById('menu-bars');
 
 const DARK_THEME = 'dark';
-const LIGHT_THEME = 'light'
-
-
-function toggleDarkLightMode(isDark) {
-  // сюди будуть писатись тернарники де буде провірятись яка тема стоїть у юзера та будуть застосовуватись відповідні стилі
-
-  // example 
-}
-
+const LIGHT_THEME = 'light';
 
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', DARK_THEME);
-    toggleDarkLightMode(true);
     localStorage.setItem('theme', DARK_THEME);
   } else {
     document.documentElement.setAttribute('data-theme', LIGHT_THEME);
-    toggleDarkLightMode(false);
     localStorage.setItem('theme', LIGHT_THEME);
   }
 }
@@ -33,3 +25,19 @@ if (currentTheme) {
     toggleDarkLightMode(true);
   }
 }
+
+function toggleNav() {
+  menuBars.classList.toggle('change');
+}
+
+menuBars.addEventListener('click', toggleNav);
+
+//DROPDOWN JS
+
+const dropdown = document.querySelector('.header-signin-dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropdown.addEventListener('click', function () {
+  dropdownContent.style.display =
+    dropdownContent.style.display === 'block' ? 'none' : 'block';
+});

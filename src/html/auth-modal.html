@@ -1,0 +1,112 @@
+<div class="auth-modal">
+  <div class="auth-modal__box">
+    <div class="auth-modal__content">
+      <button
+        id="auth-modal-btn"
+        class="auth-modal__button modal__button"
+        type="button"
+      >
+        <svg class="modal__icon" width="28" height="28">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <form class="auth-modal__form" name="user-date" action="#">
+        <div class="auth-modal__field">
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label">NAME</label>
+          </div>
+        </div>
+        <div class="auth-modal__field">
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label">EMAIL</label>
+          </div>
+          <!-- <svg class="modal_icon" width="28" height="28">
+              <use href=".images/icons/icons.svg#mail-02"></use>
+            </svg> -->
+        </div>
+        <div class="auth-modal__field">
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label"
+              >PASSWORD</label
+            >
+          </div>
+          <!-- <svg class="modal_icon" width="28" height="28">
+              <use href=".images/icons/icons.svg#lock"></use>
+            </svg> -->
+        </div>
+
+        <div class="sign-container">
+          <button type="submit" class="submit-btn" id="btn-auth">
+            SIGN UP
+          </button>
+          <p class="auth-modal_text">
+            <a class="registration" href="#">SIGN UP</a> SIGN IN
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="registr-modal" class="registr-modal">
+  <div class="registr-modal__box">
+    <div class="registr-modal__content">
+      <button
+        id="registr-modal-btn"
+        class="registr-modal__button modal__button"
+        type="button"
+      >
+        <svg class="modal__icon" width="30" height="30">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h1 class="registr-modal__header">Sign up</h1>
+      <form class="registr-modal__form" name="user-date" action="#">
+        <div class="registr-modal__field">
+          <label for="user-email" class="registr-modal__label">Email</label>
+          <input
+            type="email"
+            name="user-email"
+            id="user-email-reg"
+            class="registr-modal__input"
+          />
+        </div>
+        <div class="registr-modal__field">
+          <label for="user-password" class="registr-modal__label"
+            >Password</label
+          >
+          <input
+            type="password"
+            name="user-password"
+            id="user-password-reg"
+            class="registr-modal__input"
+          />
+        </div>
+
+        <button type="submit" class="submit-btn" id="btn-reg">Sign up</button>
+        <p class="registr-modal_text">
+          Do you have an account?
+          <a class="authorization-link" href="#">Sign in now.</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
