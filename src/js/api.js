@@ -1,4 +1,5 @@
 export { getBookCategories, getBooksByCategory, getTopFiveBooks, getBookById };
+import { alertError } from './notifies';
 
 import axios from 'axios';
 
@@ -7,24 +8,24 @@ const BASE_URL = 'https://books-backend.p.goit.global/';
 async function getBookCategories() {
   try {
     const data = await axios.get(BASE_URL + 'books/category-list');
-
     return data;
   } catch (error) {
-    console.log('Something went wrong, please try again.');
+    alertError('Something went wrong, please try again.');
     return error;
   }
 }
 // example
-// getBookCategories().then(res => console.log(res));
+// getBookCategories().then(res => console.log(res.data));
 
 async function getBooksByCategory(selectedCategory) {
   try {
     const data = await axios.get(
       BASE_URL + `books/category?category=${selectedCategory}`
     );
+
     return data;
   } catch (error) {
-    console.log('Something went wrong, please try again.');
+    alertError('Something went wrong, please try again.');
     return error;
   }
 }
@@ -36,7 +37,7 @@ async function getTopFiveBooks() {
     const books = await axios.get(BASE_URL + 'books/top-books');
     return books;
   } catch (error) {
-    console.log('Something went wrong, please try again.');
+    alertError('Something went wrong, please try again.');
     return error;
   }
 }

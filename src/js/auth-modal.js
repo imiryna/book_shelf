@@ -11,7 +11,7 @@ const signButtom = document.querySelector('header-signin-dropdown');
 const idTest = document.getElementById('test');
 // console.log(authLink);
 
-authLink.addEventListener('click', onClickAuthLink);
+// authLink.addEventListener('click', onClickAuthLink);
 registrLink.addEventListener('click', onClickRegistrLink);
 
 function onClickAuthLink(e) {
@@ -71,4 +71,12 @@ function onEscapeClick(e) {
     onClickCloseBtn();
     onRegistrCloseBtn();
   }
+}
+
+openModalBtn.addEventListener('click', handleOpenModal);
+
+function handleOpenModal(e) {
+  const loginForm = document.querySelector('.auth-modal');
+  loginForm.classList.add('open');
+  const registerForm = document.querySelector('.registr-modal');
 }

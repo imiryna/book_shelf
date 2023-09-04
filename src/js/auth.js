@@ -14,12 +14,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-const openModalBtn = document.getElementById('open-modal-btn');
-openModalBtn.addEventListener('click', handleOpenModal);
-
-function handleOpenModal(e) {
-  const loginForm = document.querySelector('.auth-modal');
-  loginForm.classList.add('open');
-  const registerForm = document.querySelector('.registr-modal');
-}
