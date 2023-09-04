@@ -96,7 +96,6 @@ function renderSupport(arraySupports, arrayImg) {
     })
     .join('');
 }
-console.log(arraySupports);
 renderSupport(arraySupports, arrayImg);
 
 
