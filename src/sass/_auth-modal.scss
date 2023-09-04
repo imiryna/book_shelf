@@ -1,14 +1,14 @@
 .auth-modal,
 .registr-modal {
-  position: fixed;
+  // position: fixed;
   width: 100%;
   height: 100%;
   background-color: #4f2ee8;
   top: 0;
   left: 0;
 
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  // visibility: hidden;
   transition: all 0.5s ease 0s;
   overflow-y: auto;
   z-index: 3;
@@ -50,11 +50,12 @@
 .auth-modal__button.modal__button,
 .registr-modal__button.modal__button {
   position: absolute;
-  margin-top: 16px;
-  margin-right: 16px;
+  top: 16px;
+  right: 16px;
   stroke: #111111;
   cursor: pointer;
   transition: transform 300ms ease;
+  background-color: #f6f6f6;
   &:hover,
   &:focus {
     stroke: #111111;
@@ -158,4 +159,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modal-icon {
+  position: absolute;
+  margin-top: 50px;
 }
