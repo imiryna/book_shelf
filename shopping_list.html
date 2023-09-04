@@ -14,11 +14,66 @@
     />
 
     <title>Shopping list</title>
+    <script type="module" crossorigin src="/book_shelf/assets/main-16d89036.js"></script>
+    <link rel="stylesheet" href="/book_shelf/assets/main-19aeb54c.css">
   </head>
   <body>
+    <header class="header">
+        <div class="header-container">
+    <a href="../index.html" class="logo-text"> Bookshelf </a>
+    <nav class="header-navigation-desktop">
+      <ul class="header-nav-list">
+        <li class="nav-list-item header-current-page"><a href="../index.html" class="nav-list-link">Home</a></li>
+        <li class="nav-list-item"><a href="../shopping_list.html" class="nav-list-link">Shopping list</a></li>
+      </ul>
+    </nav>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch">
+        <input type="checkbox" />
+        <div class="switch-slider round"></div>
+      </label>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hover Dropdown зі зображеннями та іменами</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="header-signin-dropdown">
+            <div class="dropdown-trigger">
+                <img src="../images/icons/user.svg" alt="user-photo" class="user-image">
+                <span class="user-signin">Sign In</span>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">Sign in</a>
+                <a href="#">Change user</a>
+                <!-- Додайте інші опції за аналогією -->
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
+    <div class="burger-menu-bars" id="menu-bars">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="bar4"></div>
+    </div>
+    <div class="signIn-container">
+      <!-- сюди буде робота з фаєрбазе по логінізації -->
+    </div>
+  </div>
+
+      
+    </header>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to shopping list</h1>
     </section>
+    
   </body>
 </html>
