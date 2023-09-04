@@ -1,4 +1,5 @@
-export { createBookCard };
+export { createBookCard, addListenerToCards };
+import { openModal } from './modalCard/modalCard';
 
 function slicePhrase(phrase) {
   if (phrase.length > 16) {
@@ -16,4 +17,17 @@ function createBookCard(book_obj) {
       <p class="book-author">${book_obj.author}</p>
 
     </li>`;
+}
+
+function addListenerToCards() {
+  const galleryImg = document.querySelectorAll('.book-img');
+  galleryImg.forEach(img => {
+    img.addEventListener('click', handleClickOnPhoto);
+  });
+}
+
+function handleClickOnPhoto(e) {
+  const modalWindow = document.getElementById('modalWindow');
+  modalWindow.style.display = 'block';
+  openModal(e.target.id);
 }
