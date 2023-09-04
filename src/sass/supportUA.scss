@@ -1,15 +1,9 @@
 @import './colors.scss';
 @import './null-styles.scss';
 
-// .box {
-//   border: 1px dashed red;
-// }
-
 .support {
-  width: 335px;
-
   padding-top: 40px;
-  padding-left: 20px;
+  // padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 40px;
   margin-right: auto;
@@ -18,19 +12,17 @@
 @media screen and (min-width: 768px) {
   .support {
     padding-top: 0;
-    // display: flex;
-    // width: 335px;
-    // padding-left: 32px;
-    // padding-right: 32px;
-    margin-right: 32px;
+    padding-right: 32px;
+
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1440px) {
   .support {
     padding-top: 86px;
-    max-width: 356px;
     padding-left: 24px;
-    // padding-right: 24px;
+    margin-top: 0;
     margin-left: 0;
   }
 }
@@ -43,32 +35,30 @@
   padding-top: 24px;
   border-radius: 16px;
 
-  max-width: 335px;
+  width: 335px;
   max-height: 352px;
 }
 
 @media screen and (min-width: 768px) {
   .support-card {
-    // margin: 0;
-    width: 335px;
+    padding-bottom: 24px;
+    margin-left: auto;
+    margin-right: 0;
 
+    width: 335px;
     min-height: 474px;
-    margin-right: 32px;
   }
 }
 @media screen and (min-width: 1440px) {
   .support-card {
     width: 356px;
-    // min-height: 474px;
 
-    // position: inherit;
     margin-right: auto;
     margin-left: 0;
   }
 }
 //
 .link {
-  //   text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -84,12 +74,7 @@
 
   color: $white-color;
   margin: 0;
-  // padding-top: 2px;
   padding-left: 40px;
-  // padding-bottom: 2px;
-
-  // min-width: 193px;
-  height: 32px;
 
   height: 24px;
 
@@ -137,35 +122,7 @@
 .support-item:last-child {
   padding-bottom: 0;
 }
-// .support-item:nth-last-child(1) {
-//   border: 2px solid yellow;
-//   padding-bottom: 0;
-// }
-// @media screen and (max-width: 768px) {
-//     .support-item:nth-last-child(5) {
-// display: none;
-//     }
-//   }
 
-/* .support-item:nth-child(8){
-    height: 22px;
-} */
-/* @media screen and (max-width: 768px) {
-    .support-item:nth-child(n + 5) {
-        display: none;
-    }
-} */
-
-/* @media (max-width: 352px) {
-    .support-item:nth-child(n + 8) {
-        display: none;
-        width: 100%;
-        background-color: orange;
-    }
-    .support-item:nth-child(-n + 4){
-        display: block;
-    }
-} */
 .img-support {
   /* Застосовує ефект негативу та змінює кольори на протилежні */
   filter: brightness(0) invert(1);
@@ -181,9 +138,8 @@
   width: 32px;
   height: 32px;
 
-  //   margin: 0 auto;
-  position: absolute;
-  left: 152px;
+  margin: 0 auto;
+
   bottom: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   &:hover,
@@ -218,7 +174,7 @@
   }
 }
 .icon-ua {
-  fill: #fff;
+  fill: $white-color;
   padding-bottom: 0;
   margin: 0;
 }

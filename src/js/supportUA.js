@@ -159,5 +159,4 @@ function onOutside(event) {
         showAllButton.style.display = 'block'; // Показуємо кнопку "Показати все"
     }
   
-    // document.removeEventListener('click', onOutside);
 }
