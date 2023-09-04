@@ -1,4 +1,5 @@
 import { getBookCategories, getBooksByCategory } from './api.js';
+import { createBookCard } from './utils.js';
 const sidebarList = document.querySelector('.sidebar-list');
 const categoryList = document.querySelector('.category-list');
 
@@ -33,22 +34,5 @@ function categoryFilterBooks(evt) {
   );
 }
 function createBooks(arr) {
-  return arr
-    .map(item => {
-      function slicePhrase(phrase) {
-        if (phrase.length > 16) {
-          return phrase.slice(0, 16) + '...';
-        } else {
-          return phrase;
-        }
-      }
-      return `<li class="category-item" >
-
-      <img src="${item.book_image}" alt="${item.title}" class="book-img"/>
-      <h2 class="book-title">${slicePhrase(item.title)}</h2>
-      <p class="book-author">${item.author}</p>
-
-    </li>`;
-    })
-    .join('');
+  return arr.map(item => createBookCard(item)).join('');
 }
