@@ -53,6 +53,8 @@ function createBookCard(book) {
 }
 
 function handleClickOnPhoto(e) {
+  const modalWindow = document.getElementById('modalWindow');
+  modalWindow.style.display = 'block';
   openModal(e.target.id);
   console.log('should be openModal call');
 }
