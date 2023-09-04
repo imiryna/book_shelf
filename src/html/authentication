@@ -52,10 +52,15 @@
               <use href=".images/icons/icons.svg#lock"></use>
             </svg> -->
         </div>
-        <button type="submit" class="submit-btn" id="btn-auth">SIGN UP</button>
-        <p class="auth-modal_text">
-          <a class="registration" href="#">SIGN UP</a> SIGN IN
-        </p>
+
+        <div class="sign-container">
+          <button type="submit" class="submit-btn" id="btn-auth">
+            SIGN UP
+          </button>
+          <p class="auth-modal_text">
+            <a class="registration" href="#">SIGN UP</a> SIGN IN
+          </p>
+        </div>
       </form>
     </div>
   </div>
