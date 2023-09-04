@@ -7,43 +7,51 @@
         type="button"
       >
         <svg class="modal__icon" width="28" height="28">
-          <use href="./images/icons/icons.svg#icon-x-close"></use>
+          <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
       <form class="auth-modal__form" name="user-date" action="#">
         <div class="auth-modal__field">
-          <label for="user-email" class="auth-modal__label">Name</label>
-          <input
-            type="email"
-            name="user-email"
-            id="user-email-auth"
-            class="auth-modal__input"
-          />
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label">NAME</label>
+          </div>
+        </div>
         <div class="auth-modal__field">
-          <label for="user-email" class="auth-modal__label">Email</label>
-          <input
-            type="email"
-            name="user-email"
-            id="user-email-auth"
-            class="auth-modal__input"
-          />
-            <!-- <svg class="modal_icon" width="28" height="28">
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label">EMAIL</label>
+          </div>
+          <!-- <svg class="modal_icon" width="28" height="28">
               <use href=".images/icons/icons.svg#mail-02"></use>
             </svg> -->
         </div>
         <div class="auth-modal__field">
-          <label for="user-password" class="auth-modal__label">Password</label>
-          <input
-            type="password"
-            name="user-password"
-            id="user-password-auth"
-            class="auth-modal__input"
-          />
-            <!-- <svg class="modal_icon" width="28" height="28">
+          <div class="auth-modal__input-wrapper">
+            <input
+              type="name"
+              name="user-name"
+              id="user-name-auth"
+              class="auth-modal__input"
+            />
+            <label for="user-name-auth" class="auth-modal__label"
+              >PASSWORD</label
+            >
+          </div>
+          <!-- <svg class="modal_icon" width="28" height="28">
               <use href=".images/icons/icons.svg#lock"></use>
             </svg> -->
         </div>
-
         <button type="submit" class="submit-btn" id="btn-auth">SIGN UP</button>
         <p class="auth-modal_text">
           <a class="registration" href="#">SIGN UP</a> SIGN IN
@@ -90,7 +98,7 @@
 
         <button type="submit" class="submit-btn" id="btn-reg">Sign up</button>
         <p class="registr-modal_text">
-          Do you have an account on Filmoteka?
+          Do you have an account?
           <a class="authorization-link" href="#">Sign in now.</a>
         </p>
       </form>
