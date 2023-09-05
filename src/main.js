@@ -6,6 +6,7 @@ import './js/modalCard/modalCard';
 import './js/supportUA';
 import './js/auth';
 import './js/auth-modal';
+import './js/submit-auth-form';
 
 import { markupTopCategoryBooks } from './js/preview';
 markupTopCategoryBooks();

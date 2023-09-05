@@ -1,191 +1,237 @@
-.auth-modal,
-.registr-modal {
-  //position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #4f2ee8;
+.background-authentication.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 333ms;
+}
+
+.background-authentication {
+  position: fixed;
   top: 0;
   left: 0;
-
-  opacity: 1;
-  visibility: hidden;
-  transition: all 0.5s ease 0s;
-  overflow-y: auto;
-  z-index: 3;
+  right: 0;
+  bottom: 0;
+  pointer-events: initial;
+  background-image: radial-gradient(
+    circle at top left,
+    #644fe8 0%,
+    var(--brand-color) 30%
+  );
 }
 
-.auth-modal.open,
-.registr-modal.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.auth-modal__box,
-.registr-modal__box {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px;
-  @media screen and (min-width: 768px) {
-    padding: 20px 10px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding: 30px 10px;
-  }
-}
-.auth-modal__content,
-.registr-modal__content {
-  position: relative;
-  background: #f6f6f6;
-  background: #f6f6f6;
-  min-width: 579px;
-  min-height: 516px;
-  padding: 50px 40px 40px 40px;
-  border-radius: 18px;
-  border: 2px solid #111;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-@media screen and (max-width: 768px) {
-  .auth-modal__content,
-  .registr-modal__content {
-    max-width: 200px;
-    max-height: 384px;
-    display: inline-flex;
-    padding: 40px 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    border-radius: 18px;
-    border: 2px solid #111;
+@media only screen and (min-width: 1440px) {
+  .background-authentication {
+    background-image: radial-gradient(
+      circle at top left,
+      #776be7 0%,
+      var(--brand-color) 33%
+    );
   }
 }
 
-.auth-modal__button.modal__button,
-.registr-modal__button.modal__button {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  stroke: #111111;
-  cursor: pointer;
-  transition: transform 300ms ease;
-  background-color: #f6f6f6;
-  &:hover,
-  &:focus {
-    stroke: #111111;
-    transform: rotate(90deg);
-    transition: transform 300ms ease;
-  }
-}
-
-.auth-modal__header,
-.registr-modal__header {
-  color: white;
-  font-weight: 500;
-}
-
-.auth-modal__form,
-.registr-modal__form {
-  margin-top: 35px;
-}
-
-.auth-modal__input-wrapper {
-  position: relative;
-}
-
-.auth-modal__input {
-  width: 499px;
-  display: flex;
-  padding: 20px 173px 20px 40px;
-  align-items: center;
-  gap: 10px;
-  border-radius: 40px;
-  border: 2px solid #111;
-  margin-bottom: 28px;
-}
-
-.auth-modal__label {
-  color: #111;
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 133.333% */
-  letter-spacing: -0.18px;
-  text-transform: uppercase;
+.modal-authentication {
   position: absolute;
   top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-  padding: 0 5px;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
+  left: 50%;
+  overflow: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform cubic-bezier(0.17, 0.67, 1, 0.32);
+  width: 307px;
+  padding: 14px;
+  border: 2px solid #111;
+  background-color: #f6f6f6;
+  border-radius: 18px;
 }
 
-.auth-modal__input:focus + .auth-modal__label {
-  opacity: 0;
-}
-
-.submit-btn {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  margin-bottom: 20px;
-  border-radius: 40px;
-  padding: 20px 173px;
-
-  display: block;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  font-family: inherit;
-  background-color: #111111;
-  color: #f3f3f3;
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 133.333% */
-  letter-spacing: -0.18px;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: rgb(255, 162, 0);
+@media only screen and (min-width: 1440px) {
+  .modal-authentication {
+    width: 531px;
+    padding: 24px;
   }
 }
 
-.auth-modal_text,
-.registr-modal_text {
-  color: rgb(154, 159, 159);
-  max-width: 226px;
-  align-items: center;
-}
-.registration,
-.authorization-link {
-  color: #4f2ee8;
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 133.333% */
-  letter-spacing: -0.18px;
-  text-decoration-line: underline;
-  text-transform: uppercase;
+.close-button {
+  display: block;
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border: transparent;
+  background-color: transparent;
+  margin-bottom: 14px;
+  stroke: #111;
 }
 
-.sign-container {
+@media only screen and (min-width: 1440px) {
+  .close-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .close-btn-svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.close-btn-svg {
+  fill: #111;
+  stroke: #111;
+  color: #111;
+}
+
+.close-btn {
+  stroke: #111;
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .close-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.name-form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  margin-bottom: 14px;
+  justify-content: center;
   align-items: center;
 }
 
-.modal-icon {
+@media only screen and (min-width: 1440px) {
+  .name-form {
+    gap: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+.user-area-input {
+  width: 244px;
+  padding: 16px 24px;
+  border: 2px solid #111;
+  background-color: transparent;
+  color: #111;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -0.16px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .user-area-input {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+    width: 456px;
+    height: 61px;
+    padding: 0;
+    padding-left: 40px;
+  }
+}
+
+.user-area-input::placeholder {
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -0.16px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .user-area-input::placeholder {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+  }
+}
+
+.user-area-input:focus {
+  outline-color: #111111;
+}
+
+.user-area-input:focus + .authentication-label {
+  stroke: #111111;
+}
+
+.user-log-area {
+  position: relative;
+}
+
+.authentication-label {
   position: absolute;
-  margin-top: 50px;
+  top: 33%;
+  right: 24px;
+  width: 18px;
+  height: 18px;
+  stroke: #111111;
+  fill: transparent;
+}
+
+@media only screen and (min-width: 1440px) {
+  .input-icon {
+    top: 25%;
+    right: 32px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.confirm-button {
+  width: 295px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #111;
+  color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -0.16px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .confirm-button {
+    margin-top: 16px;
+    width: 456px;
+    height: 64px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+  }
+}
+
+.confirm-button:focus,
+.confirm-button:hover {
+  color: #f3f3f3;
+  border: 2px solid #111111;
+}
+.user-auth {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 700;
+  line-height: 1.285;
+  letter-spacing: -0.14px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .user-auth {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+  }
+}
+
+.user-sign-up {
+  color: #4f2ee8;
+  text-decoration: underline;
+}
+
+.user-sign-in {
+  color: #11111180;
 }
