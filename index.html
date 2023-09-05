@@ -15,27 +15,31 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book shelf</title>
-    <script type="module" crossorigin src="/book_shelf/assets/main-a40cc602.js"></script>
-    <link rel="stylesheet" href="/book_shelf/assets/main-9ec176e9.css">
+    <script type="module" crossorigin src="/book_shelf/assets/main-317eb5c7.js"></script>
+    <link rel="stylesheet" href="/book_shelf/assets/main-f63012f9.css">
   </head>
   <body>
     <header class="header">
       <div class="menu-container" id="menu-container" js-container-dropdown>
   <div class="modal-container">
-    <div class="dropdown-trigger">
-      <img src="../images/icons/user.svg" alt="user-photo" class="user-image" />
-      <span class="user-signin">Sign In</span>
+    <div class="modal-top-flex">
+      <div class="mobile-user-info">
+        <img src="../images/icons/user.svg" alt="user-photo" class="user-image" />
+        <span class="user-signin-mobile">Sign In</span>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-nav-list">
+          <li class="nav-list-item header-current-page">
+            <a href="../index.html" class="nav-list-link">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="../shopping_list.html" class="nav-list-link"
+              >Shopping list</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header-navigation">
-      <ul class="header-nav-list">
-        <li class="nav-list-item header-current-page">
-          <a href="../index.html" class="nav-list-link">Home</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="../shopping_list.html" class="nav-list-link">Shopping list</a>
-        </li>
-      </ul>
-    </nav>
     <button type="submit" class="mobile-signOut-btn">Log out</button>
   </div>
 </div>
@@ -78,31 +82,10 @@
 </div>
 
     </header>
-
+    
     <main>
-      <article class="support">
-    <div class="support-card box">
-            
-        <h2 class="support-title box">
-        Support Ukraine
-                   <svg class="icon-ukr box" width="20" height="32">
-                <use href="../images/icons.svg#icon-Ukr"></use>
-        
-    </h2>
-
-    <ul class="support-list list box">
-        <!-- Support card -->
-    </ul>
-    <button class="support-btn box">
-        <svg class="icon-ok" width="22" height="32">
-            <use href="../images/icons.svg#icon-ok"></use>
-        </svg>
-    </button>
-</div>
-</article>
-
       <section>
-        <aside>
+        <aside class="sidebar-box">
           <section class="sidebar">
   <div class="sidebar-container">
     <h2 class="category-list-title">
@@ -117,7 +100,27 @@
   </div>
 </section>
 
-          <!-- Path to support as from index.html file -->
+          <article class="support">
+    <div class="support-card">
+            
+        <h2 class="support-title">
+        <p class="support-title-name" >Support Ukraine</p>
+                   <svg class="icon-ukr" width="20" height="32">
+                <use href="../images/icons.svg#icon-Ukr"></use>
+        
+    </h2>
+
+    <ul class="support-list list">
+        <!-- Support card -->
+    </ul>
+    <button class="support-btn" type="button">
+        <svg class="icon-ok" width="22" height="32">
+            <use href="../images/icons.svg#icon-ok"></use>
+        </svg>
+    </button>
+</div>
+</article>
+
         </aside>
 
         <div id="modalWindow"></div>
