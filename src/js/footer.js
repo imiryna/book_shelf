@@ -27,4 +27,3 @@ document.addEventListener('keydown', e => {
     closeModalDeveloper();
   }
 });
-
