@@ -22,7 +22,6 @@ if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === DARK_THEME) {
     toggleSwitch.checked = true;
-    toggleDarkLightMode(true);
   }
 }
 

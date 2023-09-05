@@ -61,6 +61,25 @@
   }
 }
 
+.menu-container {
+  z-index: 100;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform $transition-main;
+
+  background: $gradient-color;
+  padding: 20px;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  transition: transform $transition-main;
+}
+
 .header-nav-list {
   display: flex;
 }
