@@ -1,6 +1,5 @@
-const authLink = document.querySelector('.authorization');
 const authModal = document.querySelector('.auth-modal');
-const closeBtn = document.querySelector('#auth-modal-btn');
+const closeBtn = document.getElementById('auth-modal-btn');
 const registrLink = document.querySelector('.registration');
 const registrModal = document.querySelector('#registr-modal');
 const registrCloseBtn = document.querySelector('#registr-modal-btn');
@@ -10,7 +9,7 @@ const authModalLink = document.querySelector('.authorization-link');
 const body = document.querySelector('body');
 const signButtom = document.querySelector('header-signin-dropdown');
 const idTest = document.getElementById('test');
-console.log(authLink);
+// console.log(authLink);
 
 authLink.addEventListener('click', onClickAuthLink);
 registrLink.addEventListener('click', onClickRegistrLink);
