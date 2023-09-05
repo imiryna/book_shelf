@@ -1,4 +1,3 @@
-const authModal = document.querySelector('.auth-modal');
 const closeBtn = document.getElementById('auth-modal-btn');
 const registrLink = document.querySelector('.registration');
 const registrModal = document.querySelector('#registr-modal');
@@ -7,9 +6,15 @@ const authBackdrop = document.querySelector('.auth-modal__box');
 const registrBackdrop = document.querySelector('.registr-modal__box');
 const authModalLink = document.querySelector('.authorization-link');
 const body = document.querySelector('body');
-const signButtom = document.querySelector('header-signin-dropdown');
-const idTest = document.getElementById('test');
-// console.log(authLink);
+const openAuthModalBtn = document.querySelector('header-signin-dropd');
+const authModal = document.querySelector('.auth-modal');
+
+function onClickOpenAuthModal(e) {
+  // authModal.classList.add('open');
+  console.log(e.target);
+}
+
+openAuthModalBtn.addEventListener('click', onClickOpenAuthModal);
 
 authLink.addEventListener('click', onClickAuthLink);
 registrLink.addEventListener('click', onClickRegistrLink);
