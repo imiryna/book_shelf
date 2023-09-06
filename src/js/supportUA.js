@@ -96,7 +96,6 @@ function renderSupport(arraySupports, arrayImg) {
     })
     .join('');
 }
-console.log(arraySupports);
 renderSupport(arraySupports, arrayImg);
 
 
@@ -160,5 +159,4 @@ function onOutside(event) {
         showAllButton.style.display = 'block'; // Показуємо кнопку "Показати все"
     }
   
-    // document.removeEventListener('click', onOutside);
 }
