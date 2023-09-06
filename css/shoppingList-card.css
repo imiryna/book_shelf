@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  font-style: normal;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+:root {
+  --background-switch-color: #f6f6f6;
+  --primary-switcher-color: #111111;
+  --book-list-switcher-color: rgba(17, 17, 17, 0.6);
+  --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+}
+
+[data-theme=dark] {
+  --background-switch-color: #111111;
+  --primary-switcher-color: #fff;
+  --book-list-switcher-color: rgba(255, 255, 255, 0.6);
+  --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+}
+
+.card {
+  width: 350px;
+  height: 170px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text-container {
+  text-align: left;
+}
+
+.card-header {
+  margin-bottom: 4px;
+  color: #111;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+.card-genre {
+  margin-bottom: 8px;
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.36px;
+}
+
+.description-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 193px;
+  height: 68px;
+  margin-bottom: 16px;
+}
+
+.card-img {
+  width: 100px;
+  height: 142px;
+  padding: 0px;
+  display: block;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  fill: #2a2a2a;
+}/*# sourceMappingURL=shoppingList-card.css.map */
