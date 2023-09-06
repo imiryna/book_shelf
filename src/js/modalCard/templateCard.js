@@ -8,7 +8,7 @@ export function markupModal({
 }) {
   const modalWindow = document.getElementById('modalWindow');
   window.onclick = function (event) {
-    if (event.target == modalWindow) {
+    if (event.target === modalWindow) {
       modalWindow.style.display = 'none';
     }
   };
