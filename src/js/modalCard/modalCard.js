@@ -41,13 +41,13 @@ export const openModal = async id => {
 function toggleItemInLocStor(storageData, data) {
   let list = [];
   if (storageData.length > 0) {
-    const isExist = storageData.find(el => el._id === data._id);
-    if (isExist) {
+    const item = storageData.find(el => el._id === data._id);
+    if (item) {
       list = [...storageData.filter(({ _id }) => _id !== data._id)];
 
       localStorage.setItem(localStorageKey, JSON.stringify(list));
     } else {
-      list = [...storageData, isExist];
+      list = [...storageData, data];
       localStorage.setItem(localStorageKey, JSON.stringify(list));
     }
   } else {
