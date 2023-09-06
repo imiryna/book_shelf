@@ -1,0 +1,67 @@
+@import './colors.scss';
+@import './null-styles.scss';
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 40px 0;
+}
+#previous-box, #next-box {
+    display: flex;
+    gap: 8px;
+}
+#current-page-box {
+    display: flex;
+    gap: 10px;
+}
+.svg {
+    background: black;
+}
+.page {
+    background-color: var(--book-list-switcher-color-opp);
+    color: var(--primary-switcher-color);
+    border: solid 1.5px var(--primary-switcher-color);
+}
+
+.current-page {
+    background: var(--primary-switcher-color);
+    color: var(--background-switch-color);
+}
+.pagin-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+
+    &:hover, &:focus {
+        scale: 1.05;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.prev-btn {
+    background-color: black;
+     border: solid 1.5px black;
+}
+.next-btn {
+    background-color: #EAC645;
+    border: solid 1.5px black;
+}
+.third-page {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}

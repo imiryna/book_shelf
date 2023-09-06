@@ -47,15 +47,15 @@ const arraySupports = [
 ];
 
 const arrayImg = [
-  { name: 'Save the Children', img: '../images/supportUA/SaveTheChildren.png' },
-  { name: 'Project HOPE', img: '../images/supportUA/projectHope.png' },
-  { name: 'International Medical Corps', img: '../images/supportUA/interMed.png' },
-  { name: 'UNITED24', img: '../images/supportUA/united24_1.png' },
-  { name: 'Medicins Sans Frontieres', img: '../images/supportUA/medSans.png' },
-  { name: 'RAZOM', img: '../images/supportUA/razom.png' },
-  { name: 'Action against hunger', img: '../images/supportUA/actionAH.png' },
-  { name: 'World vision', img: '../images/supportUA/worldV.png' },
-  { name: 'Serhiy Prytula Charity Foundation', img: '../images/supportUA/prytula.png' },
+  { name: 'Save the Children', img: 'src="./images/supportUA/SaveTheChildren.png"' },
+  { name: 'Project HOPE', img: 'src="./images/supportUA/projectHope.png"' },
+  { name: 'International Medical Corps', img: 'src="./images/supportUA/interMed.png"' },
+  { name: 'UNITED24', img: 'src="./images/supportUA/united24_1.png' },
+  { name: 'Medicins Sans Frontieres', img: 'src="./images/supportUA/medSans.png"' },
+  { name: 'RAZOM', img: 'src="./images/supportUA/razom.png' },
+  { name: 'Action against hunger', img: 'src="./images/supportUA/actionAH.png"' },
+  { name: 'World vision', img: 'src="./images/supportUA/worldV.png"' },
+  { name: 'Serhiy Prytula Charity Foundation', img: 'src="../images/supportUA/prytula.png"' },
 ];
 
 const supCard = document.querySelector('.support-card');
@@ -83,9 +83,9 @@ function renderSupport(arraySupports, arrayImg) {
       const imgSrc = imgInfo ? imgInfo.img : ''; // Отримуємо шлях до зображення
 
       return `
-                <li class="support-item box">
+                <li class="support-item">
                     <a class="support-link link" href="${url}" target="_blank" rel="noopener noreferrer">
-                        <span class="support-numbers box">${formatNumber(
+                        <span class="support-numbers">${formatNumber(
                           (counter += 1)
                         )}</span>
                         <img class="img-support" src="${imgSrc}" alt="${title}">
