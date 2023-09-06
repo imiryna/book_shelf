@@ -36,8 +36,6 @@ export const openModal = async id => {
   });
 };
 
-// openModal(book.id);
-
 function toggleItemInLocStor(storageData, data) {
   let list = [];
   if (storageData.length > 0) {

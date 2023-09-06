@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -94,7 +94,7 @@ h6 {
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
@@ -108,7 +108,7 @@ h6 {
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
@@ -317,7 +317,9 @@ a {
   letter-spacing: -0.32px;
   text-transform: lowercase;
 }
-.sidebar-link:hover, .sidebar-link:focus, .sidebar-link.active,
+.sidebar-link:hover,
+.sidebar-link:focus,
+.sidebar-link.active,
 .category-list-link:hover,
 .category-list-link:focus,
 .category-list-link.active {
@@ -344,7 +346,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     -moz-column-gap: 25px;
-         column-gap: 25px;
+    column-gap: 25px;
     row-gap: 40px;
   }
 }
@@ -400,7 +402,7 @@ a {
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
@@ -496,7 +498,11 @@ h6 {
 
 .support-card {
   display: block;
-  background-image: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4f2ee8 18.03%, #fff 100%);
+  background-image: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   position: relative;
   margin: 0 auto;
@@ -631,7 +637,9 @@ h6 {
 }
 .support-btn:hover,
 .support-btn:focus {
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .icon-ok {
@@ -650,4 +658,4 @@ h6 {
 
 .support-numbers {
   color: #fff;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
