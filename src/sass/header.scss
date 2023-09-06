@@ -93,6 +93,8 @@
   }
 }
 
+
+
 .nav-list-link {
   color: var(--secondary-switch-color);
 
@@ -257,13 +259,6 @@ input:checked + .switch-slider::before {
 
 /* --- Mobile Menu ---------------------------------- */
 
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  height: 93%;
-  // justify-content: space-between;
-}
-
 .menu-container {
   z-index: 100;
   position: fixed;
@@ -274,7 +269,10 @@ input:checked + .switch-slider::before {
   transform: translateX(100%);
   transition: transform $transition-main;
 
-  background: $gradient-color;
+  background: url(../images/mobile-munu-books.png), $gradient-color;
+  background-repeat: no-repeat;
+  background-position: right 50% bottom 14%;
+  background-size: contain;
   padding: 20px;
 }
 
@@ -314,10 +312,10 @@ input:checked + .switch-slider::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 121px;
+  position: absolute;
+  bottom: 18%;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
   letter-spacing: -0.56px;
   padding: 15px 24px;
   
@@ -339,6 +337,13 @@ input:checked + .switch-slider::before {
 
   &:active {
     transform: scale(98%);
+  }
+
+  @media screen and (min-height: 650px ) {
+    bottom: 13%;
+  }
+  @media screen and (min-height: 750px ) {
+    bottom: 10%;
   }
 }
 
