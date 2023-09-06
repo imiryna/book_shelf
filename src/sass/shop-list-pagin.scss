@@ -18,6 +18,11 @@
 .svg {
     background: black;
 }
+.page {
+    background-color: var(--book-list-switcher-color-opp);
+    color: var(--primary-switcher-color);
+    border: solid 1.5px var(--primary-switcher-color);
+}
 
 .current-page {
     background: var(--primary-switcher-color);
@@ -30,7 +35,6 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    border: solid 1.5px var(--primary-switcher-color);
 
     font-size: 18px;
     font-weight: 700;
@@ -48,9 +52,11 @@
 
 .prev-btn {
     background-color: black;
+     border: solid 1.5px black;
 }
 .next-btn {
     background-color: #EAC645;
+    border: solid 1.5px black;
 }
 .third-page {
     display: none;
