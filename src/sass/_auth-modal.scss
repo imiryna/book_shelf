@@ -110,6 +110,10 @@
   }
 }
 
+.user-log-area {
+  position: relative;
+}
+
 .user-area-input {
   width: 244px;
   padding: 16px 24px;
@@ -159,10 +163,6 @@
   stroke: #111111;
 }
 
-.user-log-area {
-  position: relative;
-}
-
 .authentication-label {
   position: absolute;
   top: 33%;
@@ -174,7 +174,7 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .input-icon {
+  .authentication-label {
     top: 25%;
     right: 32px;
     width: 28px;
@@ -183,7 +183,7 @@
 }
 
 .confirm-button {
-  width: 295px;
+  width: 244px;
   height: 50px;
   border-radius: 40px;
   background-color: #111;
