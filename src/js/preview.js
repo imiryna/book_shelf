@@ -15,7 +15,7 @@ function markupTopCategoryBooks() {
     addListenerToCards();
   });
 }
-markupTopCategoryBooks();
+// markupTopCategoryBooks();
 
 function createCategoryBox(category) {
   const bookList = category.books

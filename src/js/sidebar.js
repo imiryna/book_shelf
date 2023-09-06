@@ -1,7 +1,8 @@
 import { getBookCategories, getBooksByCategory } from './api.js';
-import { createBookCard } from './utils.js';
+import { createBookCard, addListenerToCards } from './utils.js';
+
 const sidebarList = document.querySelector('.sidebar-list');
-const categoryList = document.querySelector('.category-list');
+const contentBox = document.getElementById('content');
 
 getBookCategories().then(({ data }) =>
   sidebarList.insertAdjacentHTML('beforeend', createCategoryList(data))
@@ -29,9 +30,12 @@ function categoryFilterBooks(evt) {
   }
   evt.preventDefault();
   toggleActiveLink(evt);
-  getBooksByCategory(evt.target.textContent).then(
-    ({ data }) => (categoryList.innerHTML = createBooks(data))
-  );
+  getBooksByCategory(evt.target.textContent).then(({ data }) => {
+    contentBox.innerHTML = `<div class="category-container">
+    <ul class="category-list">${createBooks(data)}</ul>
+  </div>`;
+    addListenerToCards();
+  });
 }
 function createBooks(arr) {
   return arr.map(item => createBookCard(item)).join('');
