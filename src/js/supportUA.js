@@ -83,9 +83,9 @@ function renderSupport(arraySupports, arrayImg) {
       const imgSrc = imgInfo ? imgInfo.img : ''; // Отримуємо шлях до зображення
 
       return `
-                <li class="support-item box">
+                <li class="support-item">
                     <a class="support-link link" href="${url}" target="_blank" rel="noopener noreferrer">
-                        <span class="support-numbers box">${formatNumber(
+                        <span class="support-numbers">${formatNumber(
                           (counter += 1)
                         )}</span>
                         <img class="img-support" src="${imgSrc}" alt="${title}">
