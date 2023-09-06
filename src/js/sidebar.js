@@ -16,7 +16,8 @@ function createCategoryList(data) {
     .join('');
 }
 
-function toggleActiveLink(evt) {
+export function toggleActiveLink(evt) {
+  // console.log('Sidebar', evt); це ще потрібно щоб зробтити підсвітку як натиснyти кнопку see more
   const currentActiveLink = document.querySelector('.active');
   currentActiveLink.classList.remove('active');
   evt.target.classList.add('active');
@@ -33,6 +34,6 @@ function categoryFilterBooks(evt) {
     ({ data }) => (categoryList.innerHTML = createBooks(data))
   );
 }
-function createBooks(arr) {
+export function createBooks(arr) {
   return arr.map(item => createBookCard(item)).join('');
 }

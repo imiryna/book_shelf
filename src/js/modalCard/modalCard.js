@@ -47,7 +47,7 @@ function toggleItemInLocStor(storageData, data) {
 
       localStorage.setItem(LocalStorageKey, JSON.stringify(list));
     } else {
-      list = [...storageData, item];
+      list = [...storageData, data];
       localStorage.setItem(LocalStorageKey, JSON.stringify(list));
     }
   } else {

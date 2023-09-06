@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
 
 @import './header.scss';
-@import './auth-modal.scss';
+// @import './auth-modal.scss';
 @import './sidebar.scss';
 @import './supportUA.scss';
-@import './_auth-modal.scss';
+// @import './_auth-modal.scss';
 
 // CSS for sidebar navigation <aside>
 @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -13,3 +13,5 @@
     justify-content: space-between;
   }
 }
+@import './modalCard.scss';
+@import './preview.scss';

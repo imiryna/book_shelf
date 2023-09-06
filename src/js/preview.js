@@ -1,4 +1,5 @@
-import { getTopFiveBooks } from './api';
+import { getBooksByCategory, getTopFiveBooks } from './api';
+import { createBooks, toggleActiveLink } from './sidebar';
 export { markupTopCategoryBooks };
 import { createBookCard, addListenerToCards } from './utils';
 
@@ -9,7 +10,7 @@ function markupTopCategoryBooks() {
       //   console.log(category);
       const categoryBox = createCategoryBox(category);
       document
-        .querySelector('.top-book-list')
+        .querySelector('.category-list')
         .insertAdjacentHTML('beforeend', categoryBox);
     });
     addListenerToCards();
@@ -27,12 +28,19 @@ function createCategoryBox(category) {
             `;
     })
     .join('');
+  // const seeMoreBtn = document.querySelector('.category-list');
+  const categoryList = document.querySelector('.category-list');
+  categoryList?.addEventListener('click', function (event) {
+    event.preventDefault();
+    // toggleActiveLink(event);
+    getBooksByCategory(event.target.value).then(
+      ({ data }) => (categoryList.innerHTML = createBooks(data))
+    );
+  });
   return `
-<div class="category-box">
+ <div class="category-box">
     <p class="name-category">${category.list_name}</p>
-    <ul class="category-list-book">${bookList}</ul>
-    <div>
-      <button class="see-more">see&nbsp;more</button>
-    </div>
-        `;
+    <ul class="js-list-books category-list-book">${bookList}</ul>
+      <button value="${category.list_name}" class="js-btn-books see-more">See more</button>
+    </div>`;
 }
