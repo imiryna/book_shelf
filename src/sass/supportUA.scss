@@ -1,10 +1,31 @@
 @import './colors.scss';
 @import './null-styles.scss';
 
-// .box {
-//   border: 1px dashed red;
-// }
+.support {
+  padding-top: 40px;
+  // padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .support {
+    padding-top: 40px;
+    padding-right: 32px;
 
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .support {
+    padding-top: 86px;
+    padding-left: 24px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
 .support-card {
   display: block;
   background-image: $gradient-color;
@@ -12,7 +33,7 @@
   position: relative;
   margin: 0 auto;
   padding-top: 24px;
-
+  padding-bottom: 20px;
   border-radius: 16px;
 
   width: 335px;
@@ -21,38 +42,48 @@
 
 @media screen and (min-width: 768px) {
   .support-card {
-    margin: 0;
+    // padding-top: 40px;
+    padding-bottom: 24px;
+
+    // margin-top: 40px;
+    margin-left: auto;
+    margin-right: 0;
+
+    width: 335px;
     min-height: 474px;
   }
 }
 @media screen and (min-width: 1440px) {
   .support-card {
+    // margin-top: 0;
+    // padding-top: 0;
     width: 356px;
+
+    margin-right: auto;
+    margin-left: 0;
   }
 }
-// 
+//
 .link {
-//   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
 .support-title {
-font-family: DM Sans;
-font-size: 24px;
-font-weight: 700;
-line-height: 1.16; 
-letter-spacing: -0.96px;
+  font-family: DM Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.96px;
 
   display: flex;
+
   color: $white-color;
   margin: 0;
-  padding-top: 2px;
   padding-left: 40px;
-  padding-bottom: 2px;
-  min-width: 161px;
+
   height: 24px;
- 
+
   gap: 12px;
 }
 @media screen and (min-width: 768px) {
@@ -61,23 +92,24 @@ letter-spacing: -0.96px;
     height: 28px;
   }
 }
+.support-title-name {
+  padding-top: 2px;
+}
 
 .support-numbers {
-    color: $white-color;
-    font-family: DM Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.28;
-    letter-spacing: -0.56px;
+  color: $white-color;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
   padding-top: 7px;
   padding-bottom: 7px;
   margin-right: 16px;
 }
 .support-list {
-
-  padding: 42px 40px 24px;
-
+  padding: 42px 40px 0;
 
   margin: 0;
 
@@ -88,43 +120,29 @@ letter-spacing: -0.96px;
   .support-list {
     padding-top: 40px;
   }
+  
 }
 
 .support-item {
   padding-bottom: 20px;
 }
+
 .support-item:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
-// .support-item:nth-last-child(1) {
-//   border: 2px solid yellow;
-//   padding-bottom: 0;
-// }
-// @media screen and (max-width: 768px) {
-//     .support-item:nth-last-child(5) {
-// display: none;
-//     }
-//   }
+@media screen and (max-width: 768px){
+  .support-item:nth-child(4){
+  padding-bottom: 16px;
+}
+}
+@media screen and ( min-width: 768px) and (max-width: 1439px){
+  .support-item:nth-child(6){
+    padding-bottom: 24px;
+  }
+}
 
-/* .support-item:nth-child(8){
-    height: 22px;
-} */
-/* @media screen and (max-width: 768px) {
-    .support-item:nth-child(n + 5) {
-        display: none;
-    }
-} */
 
-/* @media (max-width: 352px) {
-    .support-item:nth-child(n + 8) {
-        display: none;
-        width: 100%;
-        background-color: orange;
-    }
-    .support-item:nth-child(-n + 4){
-        display: block;
-    }
-} */
+
 .img-support {
   /* Застосовує ефект негативу та змінює кольори на протилежні */
   filter: brightness(0) invert(1);
@@ -133,18 +151,23 @@ letter-spacing: -0.96px;
   height: 32px;
 }
 .support-btn {
-    display: block;
+  display: block;
   border-radius: 100%;
   border: none;
 
   width: 32px;
   height: 32px;
 
-//   margin: 0 auto;
-  position: absolute;
-  left: 152px;
+  margin: 0 auto;
+
   bottom: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &:hover,
+  &:focus {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
 }
 @media screen and (min-width: 768px) {
   .support-btn {
@@ -158,29 +181,20 @@ letter-spacing: -0.96px;
 @media screen and (min-width: 1440px) {
   .support-btn {
     left: 159px;
-    right: 159px
+    right: 159px;
   }
 }
-// @media screen and (min-width: 769px) and (max-width: 1440px) {
-//   .support-item:nth-child(n + 7) {
-//     display: none;
-//   }
-// }
-.support-btn:hover,
-.support-btn:focus {
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
+
 .icon-ok {
   margin-top: 1px;
 }
 @media screen and (min-width: 768px) {
-    .icon-ok {
-     margin-top: 3px;
-    }
+  .icon-ok {
+    margin-top: 3px;
   }
+}
 .icon-ua {
+  fill: $white-color;
   padding-bottom: 0;
   margin: 0;
 }

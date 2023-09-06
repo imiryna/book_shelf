@@ -1,6 +1,6 @@
 import { getTopFiveBooks } from './api';
 export { markupTopCategoryBooks };
-// import { openModal } from './modalCard/modalCard';
+import { createBookCard, addListenerToCards } from './utils';
 
 function markupTopCategoryBooks() {
   getTopFiveBooks().then(res => {
@@ -12,13 +12,10 @@ function markupTopCategoryBooks() {
         .querySelector('.top-book-list')
         .insertAdjacentHTML('beforeend', categoryBox);
     });
-    const galleryImg = document.querySelectorAll('.book-img');
-    galleryImg.forEach(img => {
-      img.addEventListener('click', handleClickOnPhoto);
-    });
+    addListenerToCards();
   });
 }
-markupTopCategoryBooks();
+// markupTopCategoryBooks();
 
 function createCategoryBox(category) {
   const bookList = category.books
@@ -38,25 +35,4 @@ function createCategoryBox(category) {
       <button class="see-more">see&nbsp;more</button>
     </div>
         `;
-}
-
-function createBookCard(book) {
-  return `<li class="category-list-item">
-  <img class="book-img-ts" src="${book.book_image}" alt="${book.title}" title ="${book.title}" id="${book._id}" loading="lazy" />
-  <div class="info">
-    <h2 class="title">
-     ${book.title}
-    </h2>
-    <p class="info-item">
-       ${book.author}
-    </p>
-  </div>
-</li>`;
-}
-
-function handleClickOnPhoto(e) {
-  const modalWindow = document.getElementById('modalWindow');
-  modalWindow.style.display = 'block';
-  openModal(e.target.id);
-  console.log('should be openModal call');
 }

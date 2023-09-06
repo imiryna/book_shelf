@@ -1,5 +1,7 @@
 @charset "UTF-8";
 :root {
+  --primaryHeader-switch-color: #fff;
+  --secondary-switch-color: #000;
   --background-switch-color: #f6f6f6;
   --primary-switcher-color: #111111;
   --book-list-switcher-color: rgba(17, 17, 17, 0.6);
@@ -7,6 +9,8 @@
 }
 
 [data-theme=dark] {
+  --primaryHeader-switch-color: #000;
+  --secondary-switch-color: #fff;
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
@@ -100,6 +104,30 @@ h6 {
   font-weight: 400;
 }
 
+.support {
+  width: 335px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .support {
+    padding-top: 0;
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .support {
+    padding-top: 86px;
+    max-width: 356px;
+    padding-left: 24px;
+    margin-left: 0;
+  }
+}
 .support-card {
   display: block;
   background-image: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4f2ee8 18.03%, #fff 100%);
@@ -108,14 +136,15 @@ h6 {
   margin: 0 auto;
   padding-top: 24px;
   border-radius: 16px;
-  width: 335px;
+  max-width: 335px;
   max-height: 352px;
 }
 
 @media screen and (min-width: 768px) {
   .support-card {
-    margin: 0;
+    width: 335px;
     min-height: 474px;
+    margin-right: 32px;
   }
 }
 @media screen and (min-width: 1440px) {
