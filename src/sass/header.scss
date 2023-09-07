@@ -81,8 +81,12 @@
     margin-right: 16px;
   }
 
-  &:last-child::after {
+  &:nth-child(2)::after {
     content: url(../images/icons/cart.svg);
+    margin-left: 4px;
+  }
+  &:nth-child(3)::after {
+    content: url(../images/icons/cart-dark.svg);
     margin-left: 4px;
   }
 
@@ -93,6 +97,13 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
 
 
 .nav-list-link {

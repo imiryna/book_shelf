@@ -10,12 +10,11 @@
           <a href="../index.html" class="nav-list-link">Home</a>
         </li>
         <li class="nav-list-item header-current-page">
-          <a href="../shopping_list.html" class="nav-list-link"
-            >Shopping list</a
-          >
+          <a href="../shopping_list.html" class="nav-list-link">Shopping list</a>
         </li>
       </ul>
     </nav>
+
     <button type="submit" class="mobile-signOut-btn">Log out</button>
   </div>
 </div>
@@ -38,12 +37,17 @@
     </label>
   </div>
   <div class="header-signin-dropdown">
-    <div class="dropdown-trigger">
+    <button class="dropdown-trigger user-signin">
       <img src="../images/icons/user.svg" alt="user-photo" class="user-image" />
-      <span class="user-signin">Sign In</span>
+      Sign In
+    </button>
+    <div class="dropdown-content">
+      <a id="signin-link" href="#">Sign in</a>
+      <a href="#">Change user</a>
+      <!-- Додайте інші опції за аналогією -->
     </div>
     <div class="dropdown-content">
-      <a href="#">Sign in</a>
+      <a id="signin-link" href="#">Sign in</a>
       <a href="#">Change user</a>
       <!-- Додайте інші опції за аналогією -->
     </div>
