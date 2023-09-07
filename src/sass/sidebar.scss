@@ -33,6 +33,7 @@ a {
     padding-left: 32px;
     padding-right: 32px;
     margin-left: 0;
+    margin-right: 56px;
   }
   @media screen and (min-width: 1440px) {
     max-width: 1440px;
@@ -61,7 +62,7 @@ a {
 }
 
 .sidebar-list {
-  max-width: 335px;
+  width: 335px;
   height: 228px;
   overflow-y: scroll;
   padding-right: 20px;
@@ -75,7 +76,7 @@ a {
     gap: 32px;
   }
   @media screen and (min-width: 1440px) {
-    width: 328px;
+    width: 337px;
     height: 472px;
   }
 }
