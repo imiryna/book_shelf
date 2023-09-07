@@ -1,7 +1,7 @@
 import { slicePhrase } from './utils.js';
-import amazon from './images/book-links/amazon-shop.png';
-import apple from './images/book-links/apple-shop.png';
-import bookshop from './images/book-links/bookshop.png';
+import amazon from '../images/book-links/amazon-shop.png';
+import apple from '../images/book-links/apple-shop.png';
+import bookshop from '../images/book-links/bookshop.png';
 const shoppingContainer = document.querySelector('.main-shopping-markup');
 const shoppingStorage = JSON.parse(localStorage.getItem('shoppingList'));
 const shoppingList = document.querySelector('.shopping-list');
