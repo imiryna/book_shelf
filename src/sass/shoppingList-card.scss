@@ -1,63 +1,159 @@
 @import './null-styles.scss';
 @import './colors.scss';
+.shopping-list-container {
+  max-width: 375px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+.shopping-main-title {
+  color: var(--primary-switcher-color);
+  font-family: DM Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.28px;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+}
+.main-shopping-markup {
+  margin-top: 40px;
+}
+.main-shopping-markup.is-empty {
+  margin-top: 120px;
+  @media screen and (min-width: 768px) {
+    margin-top: 140px;
+  }
+}
 
-.card {
-  width: 350px;
-  height: 170px;
+.shopping-main-list-wrapper {
+  color: $secondary-color;
+}
+.shopping-title {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.28px;
+
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 14px;
+  width: 244px;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.36px;
+
+    width: 349px;
+  }
+}
+.empty-books {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin-top: 40px;
+}
+.shopping-item {
+  position: relative;
+  display: flex;
+  gap: 14px;
   padding: 14px;
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  display: flex;
-//   text-align: center;
+  background: #fff;
 }
-.text-container{
-    // margin: 0 auto;
-    text-align: left;
-    // padding-left: 114px;
-    // padding: 14px 14px 14px 148px;
-}
-.card-header {
+.shopping-book-title {
   margin-bottom: 4px;
   color: #111;
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px; /* 112.5% */
+  line-height: 1.12;
   letter-spacing: -0.64px;
   text-transform: uppercase;
 }
-.card-genre {
+.shopping-book-category {
   margin-bottom: 8px;
   color: #b4afaf;
   font-family: DM Sans;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 116.667% */
+  line-height: 1.16;
   letter-spacing: 0.36px;
 }
-.description-container {
-//   margin: 0 auto;
+.shopping-book-description {
+  overflow: hidden;
+  color: #111;
+  text-overflow: ellipsis;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+}
+.bottom-card-wrapper {
+  margin-top: 16px;
   display: flex;
+  justify-content: space-between;
+}
+.shopping-book-author {
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.48px;
+}
+.shop-links-list {
+  display: flex;
+  gap: 8px;
+}
+.shopping-book-del-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: #4f2ee8;
+  border-radius: 50%;
+}
+.main-card-wrapper {
   width: 193px;
-  height: 68px;
-  margin-bottom: 16px;
-//   text-align: center;
- 
-  
+  @media screen and (min-width: 768px) {
+    width: 508px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 808px;
+  }
 }
-.card-img {
-  width: 100px;
-  height: 142px;
-  padding: 0px;
-//   margin-right: 20px;    
-  display: block;
-    
-}
-.icon{
-    width: 200px;
-    height: 200px;
-    fill: #2a2a2a;
-
+.hidden {
+  display: none;
 }

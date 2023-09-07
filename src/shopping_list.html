@@ -12,18 +12,49 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="sass/main.scss">
+    <link rel="stylesheet" href="sass/main.scss" />
     <title>Shopping list</title>
   </head>
   <body>
     <header class="header">
       <load crs="html/header-shopingList.html" />
     </header>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Welcome to shopping list</h1>
-      <load crs="html/shop-list-pagin.html"/>
-    </section>
-    <script type="module" src="/main.js"></script>
+    <main>
+      <div class="shopping-list-container">
+        <h1 class="shopping-main-title">
+          Shopping <span class="shopping-main-list-wrapper">List</span>
+        </h1>
+        <div class="main-shopping-markup is-empty">
+          <h2 class="shopping-title">
+            This page is empty, add some books and proceed to order.
+          </h2>
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="
+                ./images/empty-page/empty-page-tab&desk.png     1x,
+                ./images/empty-page/empty-page-tab&desk_@2x.png 2x
+              "
+              type="image/png"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="
+                ./images/empty-page/empty-page-mob.png     1x,
+                ./images/empty-page/empty-page-mob_@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              src="./images/empty-page/empty-page-mob.png"
+              class="empty-books"
+              alt="books"
+            />
+          </picture>
+        </div>
+        <ul class="shopping-list hidden"></ul>
+      </div>
+    </main>
+    <script type="module" src="./js/shopping-list.js"></script>
   </body>
 </html>

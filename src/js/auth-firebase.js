@@ -1,10 +1,10 @@
-import { initializeApp } from 'firebase/app';
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from 'firebase/auth';
+// import { initializeApp } from 'firebase/app';
+// import {
+//   getAuth,
+//   createUserWithEmailAndPassword,
+//   signInWithEmailAndPassword,
+//   signOut,
+// } from 'firebase/auth';
 export { registrationNewUser, loginUser, logOutUser };
 
 import { alertError, alertSuccess } from './notifies';

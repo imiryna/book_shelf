@@ -1,9 +1,9 @@
-export { createBookCard, addListenerToCards };
+export { createBookCard, addListenerToCards, slicePhrase };
 import { openModal } from './modalCard/modalCard';
 
-function slicePhrase(phrase) {
-  if (phrase.length > 16) {
-    return phrase.slice(0, 16) + '...';
+function slicePhrase(length, phrase) {
+  if (phrase.length > length) {
+    return phrase.slice(0, length) + '...';
   } else {
     return phrase;
   }
@@ -13,8 +13,8 @@ function createBookCard(book_obj) {
   return `<li class="category-item" >
       <img src="${book_obj.book_image}" 
       alt="${book_obj.title}" class="book-img" id="${book_obj._id}"/>
-      <h2 class="book-title">${slicePhrase(book_obj.title)}</h2>
-      <p class="book-author">${slicePhrase(book_obj.author)}</p>
+      <h2 class="book-title">${slicePhrase(16, book_obj.title)}</h2>
+      <p class="book-author">${slicePhrase(16, book_obj.author)}</p>
 
     </li>`;
 }
