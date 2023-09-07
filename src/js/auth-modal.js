@@ -51,7 +51,6 @@ async function handleFormSubmit(event) {
       () => {
         const currentUser = localStorage.getItem(LS_USER_KEY);
         if (currentUser && JSON.parse(currentUser).email === formData.email) {
-          switchAuthButton();
           toggleBtnByRegistration();
         }
       }
