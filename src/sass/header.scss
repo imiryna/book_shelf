@@ -97,14 +97,6 @@
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.stop-scroll {
-  overflow: hidden;
-}
-
 .nav-list-link {
   color: var(--secondary-switch-color);
 
@@ -436,4 +428,13 @@ input:checked + .switch-slider::before {
   transform: rotate(45deg) translate(-4px, -7px);
   width: 24px;
   height: 3px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
