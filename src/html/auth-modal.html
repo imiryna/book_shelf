@@ -1,4 +1,4 @@
-<div class="background-authentication">
+<div class="background-authentication is-hidden">
   <div class="modal-authentication">
     <button type="button" class="close-button">
       <svg class="close-btn-svg" width="28" height="28">
@@ -37,11 +37,16 @@
         </svg>
       </div>
 
-      <button class="confirm-button" type="submit">SIGN UP</button>
+      <button id="sign-in-btn" hidden class="confirm-button" type="submit">
+        SIGN IN
+      </button>
+      <button id="sign-up-btn" class="confirm-button" type="submit">
+        SIGN UP
+      </button>
     </form>
     <div class="user-auth">
-      <a class="user-sign-up" href="">SIGN UP</a>
-      <a class="user-sign-in" href="">SIGN IN</a>
+      <a id="user-sign-up" href="">SIGN UP</a>
+      <a id="user-sign-in" href="">SIGN IN</a>
     </div>
   </div>
 </div>

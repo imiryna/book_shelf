@@ -3,10 +3,10 @@ import { getBookById } from '../api.js';
 
 const modalWindow = document.getElementById('modalWindow');
 
-const LocalStorageKey = 'shopingList';
+const localStorageKey = 'shoppingList';
 
 export const openModal = async id => {
-  const localStorageData = checkLocaleStorege(LocalStorageKey);
+  const localStorageData = checkLocalStorage(localStorageKey);
 
   const { data } = await getBookById(id);
 
@@ -16,21 +16,21 @@ export const openModal = async id => {
 
   const addBtn = document.getElementById('addBtn');
 
-  const isItemInLocaleStoreg = checkItemInLocaleStorage(localStorageData, data);
-  addBtn.textContent = isItemInLocaleStoreg
+  const isItemInLocalStorage = checkItemInLocalStorage(localStorageData, data);
+  addBtn.textContent = isItemInLocalStorage
     ? 'remove from the shopping list'
     : 'Add to shopping list';
 
   addBtn.addEventListener('click', () => {
-    const newLocalStorageData = checkLocaleStorege(LocalStorageKey);
+    let newLocalStorageData = checkLocalStorage(localStorageKey);
     toggleItemInLocStor(newLocalStorageData, data);
-    const new1LocalStorageData = checkLocaleStorege(LocalStorageKey);
-    const isItemInLocaleStoreg = checkItemInLocaleStorage(
-      new1LocalStorageData,
+    newLocalStorageData = checkLocalStorage(localStorageKey);
+    const isItemInLocalStorage = checkItemInLocalStorage(
+      newLocalStorageData,
       data
     );
 
-    addBtn.textContent = isItemInLocaleStoreg
+    addBtn.textContent = isItemInLocalStorage
       ? 'remove from the shopping list'
       : 'Add to shopping list';
   });
@@ -43,18 +43,18 @@ function toggleItemInLocStor(storageData, data) {
     if (item) {
       list = [...storageData.filter(({ _id }) => _id !== data._id)];
 
-      localStorage.setItem(LocalStorageKey, JSON.stringify(list));
+      localStorage.setItem(localStorageKey, JSON.stringify(list));
     } else {
-      list = [...storageData, item];
-      localStorage.setItem(LocalStorageKey, JSON.stringify(list));
+      list = [...storageData, data];
+      localStorage.setItem(localStorageKey, JSON.stringify(list));
     }
   } else {
     list.push(data);
-    localStorage.setItem(LocalStorageKey, JSON.stringify(list));
+    localStorage.setItem(localStorageKey, JSON.stringify(list));
   }
 }
 
-function checkItemInLocaleStorage(storageData, data) {
+function checkItemInLocalStorage(storageData, data) {
   if (storageData.length > 0) {
     const item = storageData.find(el => el._id === data._id);
     if (item) {
@@ -67,8 +67,8 @@ function checkItemInLocaleStorage(storageData, data) {
   }
 }
 
-function checkLocaleStorege(LocalStorageKey) {
-  return localStorage.getItem(LocalStorageKey)
-    ? JSON.parse(localStorage.getItem(LocalStorageKey))
+function checkLocalStorage(localStorageKey) {
+  return localStorage.getItem(localStorageKey)
+    ? JSON.parse(localStorage.getItem(localStorageKey))
     : [];
 }
