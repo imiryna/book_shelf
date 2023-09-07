@@ -9,7 +9,9 @@
 @import './modalCard.scss';
 @import './shoppingList-card.scss';
 @import './footer.scss';
-@import './shop-list-pagin' .main-section {
+@import './shop-list-pagin';
+
+.main-section {
   display: flex;
 }
 // CSS for sidebar navigation <aside>
