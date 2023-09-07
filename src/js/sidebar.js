@@ -12,12 +12,18 @@ function createCategoryList(data) {
   return data
     .map(
       item =>
-        `<li class="sidebar-item"><a href="" class="sidebar-link">${item.list_name}</a></li>`
+        `<li class="sidebar-item"><a id="${item.list_name
+          .split(' ')
+          .join('')
+          .toLowerCase()}" href="" class="sidebar-link">${
+          item.list_name
+        }</a></li>`
     )
     .join('');
 }
 
-function toggleActiveLink(evt) {
+export function toggleActiveLink(evt) {
+  // console.log('Sidebar', evt); це ще потрібно щоб зробтити підсвітку як натиснyти кнопку see more
   const currentActiveLink = document.querySelector('.active');
   currentActiveLink.classList.remove('active');
   evt.target.classList.add('active');
@@ -37,6 +43,6 @@ function categoryFilterBooks(evt) {
     addListenerToCards();
   });
 }
-function createBooks(arr) {
+export function createBooks(arr) {
   return arr.map(item => createBookCard(item)).join('');
 }

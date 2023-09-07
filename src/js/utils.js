@@ -14,7 +14,7 @@ function createBookCard(book_obj) {
       <img src="${book_obj.book_image}" 
       alt="${book_obj.title}" class="book-img" id="${book_obj._id}"/>
       <h2 class="book-title">${slicePhrase(book_obj.title)}</h2>
-      <p class="book-author">${book_obj.author}</p>
+      <p class="book-author">${slicePhrase(book_obj.author)}</p>
 
     </li>`;
 }

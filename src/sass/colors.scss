@@ -14,10 +14,9 @@
   --background-switch-color: #111111;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
-  
+
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
 }
-
 
 $gradient-color: radial-gradient(
   189.32% 190.93% at 59.76% -23.42%,
@@ -34,3 +33,4 @@ $white-color: #fff;
 $box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 
 $transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-secondary: 500ms cubic-bezier(0.4, 0, 0.2, 1);
