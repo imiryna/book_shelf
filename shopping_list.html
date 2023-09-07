@@ -14,8 +14,8 @@
     />
     
     <title>Shopping list</title>
-    <script type="module" crossorigin src="/book_shelf/assets/main-0c71f048.js"></script>
-    <link rel="stylesheet" href="/book_shelf/assets/main-e02a88ec.css">
+    <script type="module" crossorigin src="/book_shelf/assets/main-c236bd83.js"></script>
+    <link rel="stylesheet" href="/book_shelf/assets/main-026b6697.css">
   </head>
   <body>
     <header class="header">
@@ -31,12 +31,11 @@
           <a href="../index.html" class="nav-list-link">Home</a>
         </li>
         <li class="nav-list-item header-current-page">
-          <a href="../shopping_list.html" class="nav-list-link"
-            >Shopping list</a
-          >
+          <a href="../shopping_list.html" class="nav-list-link">Shopping list</a>
         </li>
       </ul>
     </nav>
+
     <button type="submit" class="mobile-signOut-btn">Log out</button>
   </div>
 </div>
@@ -59,12 +58,23 @@
     </label>
   </div>
   <div class="header-signin-dropdown">
-    <div class="dropdown-trigger">
+    <button class="dropdown-trigger user-signin">
       <img src="../images/icons/user.svg" alt="user-photo" class="user-image" />
-      <span class="user-signin">Sign In</span>
+      Sign In
+    </button>
+    <button class="dropdown-logging hidden">
+      Log Out
+    </button>
+    <button class="dropdown-logging sign-up-btn hidden">
+      Sign Up
+    </button>
+    <div class="dropdown-content">
+      <a id="signin-link" href="#">Sign in</a>
+      <a href="#">Change user</a>
+      <!-- Додайте інші опції за аналогією -->
     </div>
     <div class="dropdown-content">
-      <a href="#">Sign in</a>
+      <a id="signin-link" href="#">Sign in</a>
       <a href="#">Change user</a>
       <!-- Додайте інші опції за аналогією -->
     </div>
