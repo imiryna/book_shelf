@@ -7,7 +7,6 @@ function markupTopCategoryBooks() {
   getTopFiveBooks().then(res => {
     const topBooks = res.data;
     topBooks.forEach(category => {
-      console.log(category);
       const categoryBox = createCategoryBox(category);
       document
         .querySelector('.js-books')
@@ -27,7 +26,6 @@ function createCategoryBox(category) {
     event.preventDefault();
 
     sidebarList.childNodes.forEach(child => {
-      console.log(child.childNodes);
       child.childNodes.forEach(c => {
         if (c.innerHTML === event.target.value) {
           currentActiveLink.classList.remove('active');
