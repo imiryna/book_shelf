@@ -14,17 +14,18 @@
     />
     
     <title>Shopping list</title>
-    <script type="module" crossorigin src="/book_shelf/assets/main-7eb865d6.js"></script>
-    <link rel="stylesheet" href="/book_shelf/assets/main-026b6697.css">
+    <script type="module" crossorigin src="/book_shelf/assets/shopping_list-f409d0a1.js"></script>
+    <link rel="modulepreload" crossorigin href="/book_shelf/assets/utils-d45c4dfd.js">
+    <link rel="stylesheet" href="/book_shelf/assets/utils-64b35d3f.css">
   </head>
   <body>
     <header class="header">
       <div class="menu-container" id="menu-container" js-container-dropdown>
   <div class="modal-container">
-    <div class="mobile-user-info">
-      <img src="../images/icons/user.svg" alt="user-photo" class="user-image" />
-      <span class="user-signin-mobile">Sign In</span>
-    </div>
+    <button class="dropdown-trigger user-signin mobile-user-info">
+      <img src="/book_shelf/assets/user-84a275ad.svg" alt="user-photo" class="user-image" />
+      Sign In
+    </button>
     <nav class="header-navigation">
       <ul class="header-nav-list">
         <li class="nav-list-item">
@@ -89,34 +90,36 @@
 </div>
 
     </header>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Welcome to shopping list</h1>
-      <div class="pagination" id="pagination">
-    <div id="previous-box">
-        <button type="button" class="pagin-btn double-arrow prev-btn">
-            <img src="../images/icons/double-left-arrow.svg" alt="Left arrow">
-        </button>
-        <button type="button" class="pagin-btn prev-btn">
-            <img src="../images/icons/one-left-arrow.svg" alt="Left arrow">
-        </button>
-    </div>
-    <div id="current-page-box">
-        <button type="button" class="first-page current-page page pagin-btn">1</button>
-        <button type="button" class="second-page page pagin-btn">2</button>
-        <button type="button" class="third-page page pagin-btn">3</button>
-        <button type="button" class="next-page page pagin-btn">...</button>
-    </div>
-    <div id="next-box">
-        <button type="button" class="pagin-btn next-btn">
-            <img src="/book_shelf/assets/one-right-arrow-d52cbdc1.svg" alt="Right arrow">
-        </button>
-        <button type="button" class="pagin-btn double-arrow next-btn">
-            <img src="/book_shelf/assets/double-right-arrow-a202661c.svg" alt="Right arrow">
-        </button>
-    </div>
-</div>
-    </section>
+    <main>
+      <div class="shopping-list-container">
+        <h1 class="shopping-main-title">
+          Shopping <span class="shopping-main-list-wrapper">List</span>
+        </h1>
+        <div class="main-shopping-markup is-empty">
+          <h2 class="shopping-title">
+            This page is empty, add some books and proceed to order.
+          </h2>
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="/book_shelf/assets/empty-page-tab_desk-229fd7ef.png 1x, /book_shelf/assets/empty-page-tab_desk_@2x-8f43c640.png 2x"
+              type="image/png"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="/book_shelf/assets/empty-page-mob-cdd8b575.png 1x, /book_shelf/assets/empty-page-mob_@2x-b7b7ecee.png 2x"
+              type="image/png"
+            />
+            <img
+              src="/book_shelf/assets/empty-page-mob-cdd8b575.png"
+              class="empty-books"
+              alt="books"
+            />
+          </picture>
+        </div>
+        <ul class="shopping-list hidden"></ul>
+      </div>
+    </main>
     
   </body>
 </html>
