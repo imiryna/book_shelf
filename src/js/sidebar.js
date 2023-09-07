@@ -12,7 +12,12 @@ function createCategoryList(data) {
   return data
     .map(
       item =>
-        `<li class="sidebar-item"><a href="" class="sidebar-link">${item.list_name}</a></li>`
+        `<li class="sidebar-item"><a id="${item.list_name
+          .split(' ')
+          .join('')
+          .toLowerCase()}" href="" class="sidebar-link">${
+          item.list_name
+        }</a></li>`
     )
     .join('');
 }
