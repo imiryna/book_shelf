@@ -1,5 +1,5 @@
 import './sass/main.scss';
-// import './js/sidebar.js';
+import './js/sidebar.js';
 import './js/themeSwitcher';
 import './js/mobile-nav-header';
 import './js/modalCard/modalCard';
