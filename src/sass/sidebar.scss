@@ -5,13 +5,13 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: var(--background-switch-color);
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #d3cfd3;
+  background-color: var(--scroll-color);
   border-radius: 10px;
-  border: 3px solid #ffffff;
+  border: 3px solid var(--scroll-color);
 }
 ul {
   list-style: none;
@@ -88,7 +88,7 @@ a {
 }
 .sidebar-link,
 .category-list-link {
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--book-list-switcher-color);
   font-family: DM Sans;
   font-size: 15px;
   font-style: normal;
@@ -99,7 +99,7 @@ a {
   &:hover,
   &:focus,
   &.active {
-    color: #4f2ee8;
+    color: var(--category-active);
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -139,7 +139,7 @@ a {
   }
 }
 .book-title {
-  color: #111;
+  color: var(--secondary-switch-color);
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;

@@ -4,6 +4,8 @@
   --background-switch-color: #f6f6f6;
   --primary-switcher-color: #111111;
   --book-list-switcher-color: rgba(17, 17, 17, 0.6);
+  --category-active: #4f2ee8;
+  --scroll-color: #E0E0E0;
 
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
 }
@@ -11,9 +13,11 @@
 [data-theme='dark'] {
   --primaryHeader-switch-color: #000;
   --secondary-switch-color: #fff;
-  --background-switch-color: #111111;
+  --background-switch-color: #202024;
   --primary-switcher-color: #fff;
   --book-list-switcher-color: rgba(255, 255, 255, 0.6);
+  --category-active: #eac645;
+  --scroll-color: rgba(17, 17, 17, 0.60);
 
   --gradient-switcher: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
 }
