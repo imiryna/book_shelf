@@ -13,6 +13,9 @@ function markupTopCategoryBooks() {
         .insertAdjacentHTML('beforeend', categoryBox);
     });
     addListenerToCards();
+    document.querySelectorAll('.see-more').forEach(btn => {
+      btn.addEventListener('click', handleSeeMore);
+    });
   });
 }
 
@@ -26,6 +29,13 @@ function createCategoryBox(category) {
       <button value="${category.list_name}" class="js-btn-books see-more">See more</button>
     </div>
         `;
+}
+
+function handleSeeMore(evt) {
+  const aForClick = document.getElementById(
+    evt.target.value.split(' ').join('').toLowerCase()
+  );
+  aForClick.click();
 }
 
 // function createCategoryBox(category) {
