@@ -24,6 +24,8 @@
       width: 100%;
       padding-top: 20px;
       padding-bottom: 20px;
+      background-color: transparent;
+      color: var(--secondary-switch-color);
       // padding-left: 149.5px;
       // padding-right: 149.5px;
       // justify-content: center;
@@ -33,7 +35,6 @@
       border-radius: 40px;
       border: 2px solid #4f2ee8;
 
-      color: #111;
       // font-family: DM Sans;
       font-size: 18px;
       // font-style: normal;
@@ -41,21 +42,25 @@
       line-height: 24px; /* 133.333% */
       letter-spacing: -0.18px;
       text-transform: uppercase;
+
+      &:hover, &:focus {
+        background-color: $secondary-color;
+      }
     }
 
     .modal-content {
       position: absolute;
-      background-color: #fff;
+      background-color: var(--background-switch-color);
       margin: 15% 60%; /* 15% from the top and centered */
       padding: 40px;
       width: 100%; /* Could be more or less, depending on screen size */
-      border: 2px solid black;
+      border: 2px solid var(--secondary-switch-color);
       border-radius: 10px;
       max-width: 579px;
       max-height: 465px;
 
       .close {
-        color: #111111;
+        color: var(--secondary-switch-color);
         position: absolute;
         top: 24px;
         right: 24px;
@@ -66,7 +71,7 @@
 
       .close:hover,
       .close:focus {
-        color: black;
+        color: $secondary-color;
         text-decoration: none;
         cursor: pointer;
       }
@@ -88,6 +93,7 @@
 
           .book_title {
             font-size: 24px;
+            color: var(--secondary-switch-color);
             
             // font-style: normal;
             font-weight: 700;
@@ -109,7 +115,7 @@
           }
 
           .book_description {
-            color: #111;
+            color: var(--secondary-switch-color);
             // font-family: DM Sans;
             font-size: 14px;
             // font-style: normal;
