@@ -317,9 +317,8 @@ input:checked + .switch-slider::before {
   transition: transform $transition-main;
 }
 
-.mobile-user-info {
-  display: flex;
-  align-items: center;
+.mobile-user-info { 
+  background-color: transparent;
   margin-bottom: 126px;
 }
 
