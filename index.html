@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/book_shelf/favicon.svg" />
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKtSURBVHgB7ZlBbtNAFED/nxiUIrUyG0QkJMweUnOCpnsQ5gR1T0BvUOcGcIP0BDhcgHADEzbsGlaBbLDYtCV4Pv+HpIqSloxjx87CT4qijCc/z+MZe/4PQEVFRW54zR+nq/oo2BJEloCCVf22QthUVihdOI2sUKpwWlmhNOHXzdFRWlmhFGGR1aA7sAbWTY2ec24nu3UPAff5ZQOQAwgOH4qB+MXvhPRZk46ssYrCr40BFCAr4Lyk3rv3Bola3NqCdESa6F1tDL3/yZvIdvsPcf7zy2dDfz4uXosCnPBI2pAVwg6OdXtR3HRkF4VfNb/TfFyLdnfeI/Co5gWST3fRh7mrJ2igt5AFiXsHHevWy4/0jQh6CjBKFMU1gIE0JwAOapnP6LLRPjc5YEQOV49dreU2aoNKwjB6FBmEAM8duVonJ7w4j6AAloTDfiOAFITRAzkxn+daIcJbs/kxpRLeNJXwpqmEMzJY1WGbhAeo6HBVp20RjlBdPA+j1dvU0oU56/jEsodh9CQ26W9BibDs2Yd+w0/zndJGmGXbaWWFUoSnsgGsQeHCWWSFQucw54vH3S+NDmSgsBEW2TCjrFCYcB6ywsopIVk11Ov2b5XYStVs6w8/Pi8v43Bgdt/MOy5ep9Gzhl8X95O9HV8RHHCC58LtSeaAV1DE2XBX6gacKZ/PH1xM1yfFmRziLgnnxUz4xdNhq4Z4ukZx5kY2dpfIW3SGuTDXKSbvhI9NutcUfjTplzYuC2O8XOTAmCA548XQ45pNtLiL8lxeMFDnegT4XI84AONiSva46DWHAQFO/gyRnZNSEHCgHqTAc4ct/pFg+iNL5BVXnpL478BIVu2sKLI2HlcaCScn70ybZFN+nFZ0KS6L8ySLxQ8hZzz3p631VSDlP6WuAtN9ril/AXVhUR4VmwdlAAAAAElFTkSuQmCC" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
@@ -15,8 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book shelf</title>
     
-    <script type="module" crossorigin src="/book_shelf/assets/main-4cf27e82.js"></script>
-    <link rel="stylesheet" href="/book_shelf/assets/main-7ea42195.css">
+    <script type="module" crossorigin src="/book_shelf/assets/main-b7e7cab7.js"></script>
+    <link rel="stylesheet" href="/book_shelf/assets/main-6105d199.css">
   </head>
   <body>
     <header class="header">
@@ -69,7 +69,12 @@
       <span class="user-signin">Sign In</span>
     </div>
     <div class="dropdown-content">
-      <a href="#">Sign in</a>
+      <a id="signin-link" href="#">Sign in</a>
+      <a href="#">Change user</a>
+      <!-- Додайте інші опції за аналогією -->
+    </div>
+    <div class="dropdown-content">
+      <a id="signin-link" href="#">Sign in</a>
       <a href="#">Change user</a>
       <!-- Додайте інші опції за аналогією -->
     </div>
@@ -86,18 +91,17 @@
     </header>
 
     <main>
-      <section>
+      <section class="main-section">
         <aside class="sidebar-box">
           <section class="sidebar">
   <div class="sidebar-container">
-    <h2 class="category-list-title">
-      <a href="../index.html" class="category-list-link active"
-        >All categories</a
-      >
+    <h2 class="js-item-category category-list-title">
+      <a href="" class="category-list-link active">All categories</a>
     </h2>
     <ul class="sidebar-list"></ul>
   </div>
 </section>
+<!-- 4../index.html -->
 
           <article class="support">
     <div class="support-card">
@@ -122,19 +126,82 @@
 
         </aside>
         <div id="content">
-          <div class="top-book-list">
-    <h1 class="best-sellers">Best Sellers <span class="best-sellers-books">Books</span></h1>
+          <!-- <section class="top-book"> -->
+<div class="top-book-list">
+  <h1 class="best-sellers">
+    Best Sellers <span class="best-sellers-books">Books</span>
+  </h1>
+  <ul class="js-books"></ul>
 </div>
-<a href="">
-    <div class="ovarlay-box"></div>
-</a>
+<!-- <a href=""> -->
+<!-- <div class="ovarlay-box"></div> -->
+<!-- </a> -->
+<!-- </section> -->
+
         </div>
-        <div id="modalWindow"></div>
+        <div class="books-modal">
+  <div id="modalWindow"></div>
+</div>
+
+        <div class="background-authentication is-hidden">
+  <div class="modal-authentication">
+    <button type="button" class="close-button">
+      <svg class="close-btn-svg" width="28" height="28">
+        <use class="close-btn" href="../images/icons.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <form class="name-form" name="name-area-form">
+      <div class="user-log-area">
+        <input
+          class="user-area-input"
+          type="text"
+          name="name"
+          placeholder="NAME"
+        />
+      </div>
+      <div class="user-log-area">
+        <input
+          class="user-area-input"
+          type="email"
+          name="email"
+          placeholder="EMAIL"
+        />
+        <svg class="authentication-label" width="28" height="28">
+          <use href="../images/icons.svg#icon-mail"></use>
+        </svg>
+      </div>
+      <div class="user-log-area">
+        <input
+          class="user-area-input"
+          type="password"
+          name="password"
+          placeholder="PASSWORD"
+        />
+        <svg class="authentication-label" width="28" height="28">
+          <use href="../images/icons.svg#icon-lock"></use>
+        </svg>
+      </div>
+
+      <button id="sign-in-btn" hidden class="confirm-button" type="submit">
+        SIGN IN
+      </button>
+      <button id="sign-up-btn" class="confirm-button" type="submit">
+        SIGN UP
+      </button>
+    </form>
+    <div class="user-auth">
+      <a id="user-sign-up" href="">SIGN UP</a>
+      <a id="user-sign-in" href="">SIGN IN</a>
+    </div>
+  </div>
+</div>
 
       </section>
 
 =======
-      <div id="modalWindow"></div>
+      <div class="books-modal">
+  <div id="modalWindow"></div>
+</div>
 
     </main>
 
