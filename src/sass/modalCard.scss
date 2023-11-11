@@ -43,7 +43,8 @@
       letter-spacing: -0.18px;
       text-transform: uppercase;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: $secondary-color;
       }
     }
@@ -51,7 +52,10 @@
     .modal-content {
       position: absolute;
       background-color: var(--background-switch-color);
-      margin: 15% 60%; /* 15% from the top and centered */
+      // margin: 15% 60%; /* 15% from the top and centered */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       padding: 40px;
       width: 100%; /* Could be more or less, depending on screen size */
       border: 2px solid var(--secondary-switch-color);
@@ -94,13 +98,12 @@
           .book_title {
             font-size: 24px;
             color: var(--secondary-switch-color);
-            
+
             // font-style: normal;
             font-weight: 700;
             line-height: 28px; /* 116.667% */
             letter-spacing: -0.96px;
             margin-bottom: 8px;
-        
           }
 
           .book_tittle_autor {

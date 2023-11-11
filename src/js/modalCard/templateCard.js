@@ -1,3 +1,7 @@
+import amazon from '../../images/book-links/amazon-shop.png';
+import apple from '../../images/book-links/apple-shop.png';
+import bookshop from '../../images/book-links/bookshop.png';
+
 export function markupModal({
   _id,
   author,
@@ -42,17 +46,17 @@ export function markupModal({
         <ul class="book_shops_list list">
         <li class="book_shop_item">
           <a href="${buy_links[0].url}"  target="_blank" class="book_shop_link link">
-            <img src="" width="62" height="19" alt="amazon" /> 
+            <img src="${amazon}" width="62" height="19" alt="amazon" /> 
           </a>
         </li>
         <li class="book_shop_item">
           <a href="${buy_links[1].url}" target="_blank" class="book_shop_link link">
-            <img src="" width="32" height="33" alt="" /> 
+            <img src="${apple}" width="32" height="33" alt="" /> 
             </a>
         </li>
         <li class="book_shop_item">
           <a href="${buy_links[2].url}" target="_blank" class="book_shop_link link">
-            <img src="" width="38" height="36" alt="" /> 
+            <img src="${bookshop}" width="38" height="36" alt="" /> 
           </a>
         </li>
         </ul>

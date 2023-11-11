@@ -2,6 +2,8 @@ import { slicePhrase } from './utils.js';
 import amazon from '../images/book-links/amazon-shop.png';
 import apple from '../images/book-links/apple-shop.png';
 import bookshop from '../images/book-links/bookshop.png';
+import trash from '../images/icons/trash.svg';
+
 const shoppingContainer = document.querySelector('.main-shopping-markup');
 const shoppingStorage = JSON.parse(localStorage.getItem('shoppingList'));
 const shoppingList = document.querySelector('.shopping-list');
@@ -24,6 +26,7 @@ function isEmptyPage() {
     shoppingList.classList.add('hidden');
   }
 }
+
 function createShoppingListMarkup(arr) {
   return arr
     .map(
@@ -48,24 +51,24 @@ function createShoppingListMarkup(arr) {
         <p class="shopping-book-author">${author}</p>
         <button class="shopping-book-del-button">
           <svg width="16" height="16" class="delete-button-icon">
-            <use href="./images/icons.svg#trash"></use>
+            <use href="${trash}"></use>
           </svg>
         </button>
         <ul class="shop-links-list">
           <li>
-            <a class="shop-link" href="${buy_links[0].url}" target="_blank"
-              ><img src="${amazon}" width="32" htight="11" alt=""></a
-            >
+            <a class="shop-link" href="${buy_links[0].url}" target="_blank">
+            <img src="${amazon}" width="32" htight="11" alt="">
+            </a>
           </li>
           <li>
-            <a class="shop-link" href="${buy_links[1].url}" target="_blank"
-              > <img src="${apple}" width="16" htight="16" alt="" /></a
-            >
+            <a class="shop-link" href="${buy_links[1].url}" target="_blank"> 
+            <img src="${apple}" width="16" htight="16" alt="" />
+            </a>
           </li>
           <li>
-            <a class="shop-link" href="${buy_links[5].url}" target="_blank"
-              >    <img src="${bookshop}" width="16" htight="16" alt="" /></a
-            >
+            <a class="shop-link" href="${buy_links[5].url}" target="_blank">
+            <img src="${bookshop}" width="16" htight="16" alt="" />
+            </a>
           </li>
         </ul>
       </div>

@@ -1,5 +1,5 @@
 import { getBooksByCategory, getTopFiveBooks } from './api';
-import { createBooks, toggleActiveLink } from './sidebar';
+// import { createBooks, toggleActiveLink } from './sidebar';
 export { markupTopCategoryBooks };
 import { createBookCard, addListenerToCards } from './utils';
 
