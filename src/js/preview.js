@@ -37,34 +37,3 @@ function handleSeeMore(evt) {
   );
   aForClick.click();
 }
-
-// function createCategoryBox(category) {
-//   console.log(category.books);
-//   const bookList = category.books.map(book => createBookCard(book)).join('');
-//   const categoryList = document.querySelector('.js-books');
-//   const sidebarList = document.querySelector('.sidebar-list');
-//   const currentActiveLink = document.querySelector('.active');
-
-//   // categoryList?.addEventListener('click', function (event) {
-//   //   event.preventDefault();
-
-//   //   sidebarList.childNodes.forEach(child => {
-//   //     child.childNodes.forEach(c => {
-//   //       if (c.innerHTML === event.target.value) {
-//   //         currentActiveLink.classList.remove('active');
-//   //         c.classList.add('active');
-//   //       }
-//   //     });
-//   //   });
-
-//   //   getBooksByCategory(event.target.value).then(
-//   //     ({ data }) => (categoryList.innerHTML = createBooks(data))
-//   //   );
-//   // });
-//   return `
-//    <div class="category-box">
-//       <p class="name-category">${category.list_name}</p>
-//       <ul class="js-list-books category-list-book">${bookList}</ul>
-//         <button value="${category.list_name}" class="js-btn-books see-more">See more</button>
-//       </div>`;
-// }

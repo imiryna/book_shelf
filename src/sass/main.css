@@ -350,9 +350,9 @@ a {
     row-gap: 40px;
   }
 }
-.category-item {
+/* .category-item {
   cursor: pointer;
-}
+} */
 
 .book-img {
   width: 335px;

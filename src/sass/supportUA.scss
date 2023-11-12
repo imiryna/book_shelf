@@ -12,11 +12,9 @@
 @media screen and (min-width: 768px) {
   .support {
     padding-right: 32px;
-    margin-right: 0;
-    margin-left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .support {
     margin-top: 0;
     margin-left: 0;
@@ -27,22 +25,18 @@
   background-image: $gradient-color;
   box-shadow: $box-shadow;
   position: relative;
-  margin: 0 auto;
-  // padding-top: 24px;
   padding-bottom: 20px;
   border-radius: 16px;
 
-  width: 335px;
+  width: 325px;
   max-height: 352px;
 }
 
 @media screen and (min-width: 768px) {
   .support-card {
     padding-bottom: 24px;
-
-    margin-left: auto;
+    // margin-left: auto;
     margin-right: 0;
-
     width: 335px;
     min-height: 474px;
   }
@@ -50,8 +44,7 @@
 @media screen and (min-width: 1440px) {
   .support-card {
     width: 356px;
-
-    margin-right: auto;
+    // margin-right: auto;
     margin-left: 0;
   }
 }

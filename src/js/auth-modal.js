@@ -24,7 +24,7 @@ elements.form.addEventListener('submit', handleFormSubmit);
 window.addEventListener('keydown', handleEscapeKey);
 
 function handleCloseButtonClick() {
-  elements.backdrop.classList.add('hidden-btn');
+  elements.backdrop.classList.add('is-hidden');
   document.body.classList.remove('scroll-lock');
 }
 
@@ -73,7 +73,7 @@ function handleEscapeKey(e) {
 
 function openAuthenticationModal() {
   elements.backdrop.classList.remove('is-hidden');
-  document.body.classList.remove('scroll-lock');
+  document.body.classList.add('scroll-lock');
 }
 
 const buttonOpenSignIn = document.getElementById('signin-link');
