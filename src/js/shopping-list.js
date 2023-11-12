@@ -1,3 +1,5 @@
+import './themeSwitcher';
+
 import { slicePhrase } from './utils.js';
 import amazon from '../images/book-links/amazon-shop.png';
 import apple from '../images/book-links/apple-shop.png';

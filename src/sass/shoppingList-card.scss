@@ -1,5 +1,10 @@
 @import './null-styles.scss';
 @import './colors.scss';
+
+.shopping-list-main {
+  background-color: var(--background-switch-color);
+}
+
 .shopping-list-container {
   max-width: 375px;
   padding-right: 20px;
@@ -41,7 +46,7 @@
   color: $secondary-color;
 }
 .shopping-title {
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--secondary-switch-color);
   text-align: center;
   font-family: DM Sans;
   font-size: 14px;

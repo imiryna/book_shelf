@@ -1,3 +1,6 @@
+# SASS generated files
+*.css.map
+
 # Logs
 logs
 *.log
