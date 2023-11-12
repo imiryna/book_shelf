@@ -14,9 +14,9 @@
     />
     
     <title>Shopping list</title>
-    <script type="module" crossorigin src="/book_shelf/assets/shopping_list-586fa87e.js"></script>
-    <link rel="modulepreload" crossorigin href="/book_shelf/assets/utils-d303e19f.js">
-    <link rel="stylesheet" href="/book_shelf/assets/utils-5897f91a.css">
+    <script type="module" crossorigin src="/book_shelf/assets/shopping_list-ad341f27.js"></script>
+    <link rel="modulepreload" crossorigin href="/book_shelf/assets/themeSwitcher-1a50a09b.js">
+    <link rel="stylesheet" href="/book_shelf/assets/themeSwitcher-4e3d1a79.css">
   </head>
   <body>
     <header class="header">
@@ -28,12 +28,15 @@
     </button>
     <nav class="header-navigation">
       <ul class="header-nav-list">
-        <li class="nav-list-item">
+        <li class="nav-list-item hidden">
           <a href="index.html" class="nav-list-link">Home</a>
         </li>
         <li class="nav-list-item header-current-page">
           <a href="shopping_list.html" class="nav-list-link">Shopping list</a>
         </li>
+        <!-- <li class="nav-list-item">
+          <a href="shopping_list.html" class="nav-list-link">Shopping list</a>
+        </li> -->
       </ul>
     </nav>
 
@@ -45,6 +48,11 @@
   <nav class="header-navigation-desktop">
     <ul class="header-nav-list">
       <li class="nav-list-item">
+        <a href="index.html" class="nav-list-link" id="light-theme-icon"
+          >Home</a
+        >
+      </li>
+      <li class="nav-list-item hidden" id="dark-theme-icon">
         <a href="index.html" class="nav-list-link">Home</a>
       </li>
       <li class="nav-list-item header-current-page">
@@ -54,7 +62,7 @@
   </nav>
   <div class="theme-switch-wrapper">
     <label class="theme-switch">
-      <input type="checkbox" />
+      <input id="theme-switch-id" type="checkbox" />
       <div class="switch-slider round"></div>
     </label>
   </div>
@@ -68,13 +76,11 @@
     <div class="dropdown-content">
       <a id="signin-link" href="#">Sign in</a>
       <a href="#">Change user</a>
-      <!-- Додайте інші опції за аналогією -->
     </div>
-    <div class="dropdown-content">
+    <!-- <div class="dropdown-content">
       <a id="signin-link" href="#">Sign in</a>
       <a href="#">Change user</a>
-      <!-- Додайте інші опції за аналогією -->
-    </div>
+    </div> -->
   </div>
   <div class="burger-menu-bars" id="menu-bars" js-close-menu>
     <div class="bar1"></div>
@@ -86,7 +92,7 @@
 </div>
 
     </header>
-    <main>
+    <main class="shopping-list-main">
       <div class="shopping-list-container">
         <h1 class="shopping-main-title">
           Shopping <span class="shopping-main-list-wrapper">List</span>
