@@ -105,9 +105,7 @@ a {
     letter-spacing: -0.36px;
   }
 }
-// .sidebar-item {
 
-// }
 .sidebar-item::first-letter,
 .category-list-title::first-letter {
   text-transform: uppercase;
@@ -147,10 +145,10 @@ a {
 }
 .book-author {
   color: #b4afaf;
-  font-family: DM Sans;
+
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
-  line-height: 117%;
+  line-height: 1.2;
   letter-spacing: -0.48px;
 }

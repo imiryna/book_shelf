@@ -35,28 +35,23 @@
     padding-right: 24px;
   }
 }
-// CSS for sidebar navigation <aside>
+// CSS for sidebar navigation <div>
 .sidebar-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 40px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
     gap: 32px;
+    margin-bottom: 100px;
   }
   @media screen and (min-width: 1440px) {
     flex-direction: column;
     gap: 40px;
+    margin-bottom: 50px;
   }
 }
-// .content {
-//   padding-left: 40px;
-//     padding-right: 20px;
-//   @media screen and (min-width: 1440px) {
-//     padding-left: 40px;
-//     padding-right: 24px;
-//   }
-// }
