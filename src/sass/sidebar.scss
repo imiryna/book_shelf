@@ -41,7 +41,7 @@ a {
   }
 }
 .category-container {
-  max-width: 335px;
+  // max-width: 335px;
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
@@ -65,8 +65,9 @@ a {
   display: flex;
   gap: 24px;
   flex-direction: column;
+
   @media screen and (min-width: 768px) {
-    height: 472px;
+    height: 406px;
     gap: 32px;
   }
   @media screen and (min-width: 1440px) {
