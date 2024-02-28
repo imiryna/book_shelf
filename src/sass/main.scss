@@ -7,7 +7,6 @@
 }
 
 @import './header.scss';
-// @import './auth-modal.scss';
 @import './sidebar.scss';
 @import './supportUA.scss';
 @import './_auth-modal.scss';
@@ -21,8 +20,8 @@
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   padding-left: 20px;
   background-color: var(--background-switch-color);
 
@@ -32,7 +31,6 @@
   }
 
   @media screen and (max-width: 1200px) {
-    // flex-wrap: nowrap; // igor
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -41,19 +39,24 @@
 .sidebar-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
     gap: 32px;
-    width: 356px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     flex-direction: column;
+    gap: 40px;
   }
 }
-.content {
-  @media screen and (min-width: 1200px) {
-    padding-left: 40px;
-    padding-right: 24px;
-  }
-}
+// .content {
+//   padding-left: 40px;
+//     padding-right: 20px;
+//   @media screen and (min-width: 1440px) {
+//     padding-left: 40px;
+//     padding-right: 24px;
+//   }
+// }
