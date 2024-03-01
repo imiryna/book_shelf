@@ -3,46 +3,35 @@
 
 .support {
   width: 335px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .support {
-    padding-right: 32px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .support {
-    margin-top: 0;
-    margin-left: 0;
+
+  @media screen and (min-width: 1440px) {
+    width: 356px;
   }
 }
 .support-card {
   display: block;
   background-image: $gradient-color;
   box-shadow: $box-shadow;
-  // position: relative;
   padding-bottom: 20px;
   border-radius: 16px;
+  padding: 28px 40px 20px 40px;
 
-  width: 325px;
+  width: 305px;
   max-height: 352px;
-}
 
-@media screen and (min-width: 768px) {
-  .support-card {
+  @media screen and (min-width: 768px) {
     padding-bottom: 24px;
     margin-right: 0;
     width: 335px;
     min-height: 474px;
   }
-}
-@media screen and (min-width: 1440px) {
-  .support-card {
+
+  @media screen and (min-width: 1440px) {
     width: 356px;
     margin-left: 0;
   }
 }
+
 //
 .link {
   display: flex;
@@ -54,25 +43,16 @@
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: -0.96px;
-
   display: flex;
-
   color: $white-color;
-  margin: 0;
-  padding-left: 40px;
-
+  margin-bottom: 40px;
   height: 24px;
-
   gap: 12px;
-}
-@media screen and (min-width: 768px) {
-  .support-title {
+
+  @media screen and (min-width: 768px) {
     min-width: 178px;
     height: 28px;
   }
-}
-.support-title-name {
-  padding-top: 2px;
 }
 
 .support-numbers {
@@ -87,35 +67,19 @@
   margin-right: 16px;
 }
 .support-list {
-  padding-left: 40px;
-  margin: 0;
-
   min-width: 159px;
   min-height: 188px;
-}
-@media screen and (min-width: 768px) {
-  .support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (min-width: 768px) {
     padding-top: 40px;
   }
 }
 
-.support-item {
-  padding-bottom: 20px;
-}
-
-.support-item:last-child {
-  padding-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .support-item:nth-child(4) {
-    padding-bottom: 16px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .support-item:nth-child(6) {
-    padding-bottom: 24px;
-  }
-}
+// .support-item {
+//   padding-bottom: 20px;
+// }
 
 .img-support {
   /* Застосовує ефект негативу та змінює кольори на протилежні */

@@ -2,17 +2,12 @@
 @import './null-styles.scss';
 
 .category-box {
-  max-width: 335px;
+  width: 320px;
 
   @media screen and (min-width: 768px) {
-    max-width: 768px;
-    // padding-left: 32px;
-    // padding-right: 32px;
+    width: 704px;
   }
   @media screen and (min-width: 1440px) {
-    max-width: 1440px;
-    // padding-left: 40px;
-    // padding-right: 24px;
   }
 }
 
@@ -46,6 +41,7 @@
 }
 .category-list-book {
   display: flex;
+  gap: 40px;
   width: 218px;
   height: 366px;
 
@@ -69,9 +65,9 @@
   }
 }
 
-.category-list-item:not(:last-child) {
-  margin-right: 24px;
-}
+// .category-list-item:not(:last-child) {
+//   margin-right: 24px;
+// }
 
 .category-item {
   @media screen and (max-width: 1200px) {
@@ -104,19 +100,19 @@
 .best-sellers-books {
   color: #4f2ee8;
 }
-.book-img-ts {
-  margin-bottom: 18px;
-  width: 180px;
-  height: 256px;
-  @media screen and (max-width: 768px) {
-    width: 218px;
-    height: 316px;
-  }
-  @media screen and (max-width: 375px) {
-    width: 335px;
-    height: 485px;
-  }
-}
+// .book-img-ts {
+//   // margin-bottom: 18px;
+//   width: 180px;
+//   height: 256px;
+//   @media screen and (max-width: 768px) {
+//     width: 218px;
+//     height: 316px;
+//   }
+//   @media screen and (max-width: 375px) {
+//     width: 305px;
+//     height: 485px;
+//   }
+// }
 
 .js-btn-books {
   width: 124px;

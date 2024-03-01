@@ -11,8 +11,8 @@ a {
 .sidebar-container {
   width: 335px;
   height: 228px;
-  margin-right: 20px;
-  // overflow: hidden;
+  // margin-left: 20px;
+  overflow: hidden;
   scroll-behavior: auto;
 
   &::-webkit-scrollbar {
@@ -41,7 +41,7 @@ a {
   }
 }
 .category-container {
-  // max-width: 335px;
+  max-width: 307px;
   padding-top: 24px;
   padding-left: 20px;
   padding-right: 20px;
@@ -61,6 +61,7 @@ a {
 
 .sidebar-list {
   height: 228px;
+
   overflow-y: scroll;
   display: flex;
   gap: 24px;
@@ -74,6 +75,19 @@ a {
     height: 472px;
   }
 }
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 40px;
+  }
+}
+
 .category-list-title {
   margin-bottom: 24px;
   @media screen and (min-width: 768px) {
@@ -91,7 +105,7 @@ a {
   text-transform: lowercase;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 335px;
+  // width: 335px;
   // white-space: nowrap;
   &:hover,
   &:focus,
@@ -111,17 +125,9 @@ a {
 .category-list-title::first-letter {
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  .category-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 25px;
-    row-gap: 40px;
-  }
-}
 
 .book-img {
-  width: 335px;
+  width: 305px;
   height: 485px;
   border-radius: 8px;
   margin-bottom: 14px;
