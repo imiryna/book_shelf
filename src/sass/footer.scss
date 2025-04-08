@@ -7,47 +7,46 @@
   |============================
 */
 
-
 .footer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 48px;
-    padding-right: 36px;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 48px;
+  padding-right: 36px;
+  text-align: center;
 
-    font-size: 14px;
-    line-height: 1.14;
+  font-size: 14px;
+  line-height: 1.14;
 
-    color: #545454;
-    background-color: var(--primaryHeader-switch-color);
-    border-top: 1px solid var(--primary-switcher-color);
+  color: #545454;
+  background-color: var(--primaryHeader-switch-color);
+  border-top: 1px solid var(--primary-switcher-color);
 }
 
 .goit-link {
-    text-decoration: underline;
-    color: #fff;
-    background-color: blue;
-    cursor: pointer;
-    border-radius: 4px;
+  text-decoration: underline;
+  color: #fff;
+  background-color: blue;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .goit-link:active,
 .goit-link:hover {
-    color: #000;
-    background-color: yellow;
+  color: #000;
+  background-color: yellow;
 }
 .students-link {
-    text-decoration: underline;
-    color: #000;
-    background-color: yellow;
+  text-decoration: underline;
+  color: #000;
+  background-color: yellow;
 
-    cursor: pointer;
-    border-radius: 4px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .students-link:active,
 .students-link:hover {
-    color: #fff;
-    background-color: blue;
+  color: #fff;
+  background-color: blue;
 }
